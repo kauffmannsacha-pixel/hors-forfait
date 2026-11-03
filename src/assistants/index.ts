@@ -1,2 +1,4 @@
-// Point d'entrée du module assistants : appelle registerView(...) ici.
-export {};
+import './script';
+import './titles';
+import './stats';
+import './thumbnails';

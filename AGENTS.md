@@ -25,3 +25,15 @@ Chaque module s'enregistre via son `src/<module>/index.ts` (déjà importé par 
 7. Sécurité : secrets via `secrets` (jamais en clair), `confirmAction` avant toute action destructive ou externe (envoi Discord, publication, mail…). Jamais d'envoi automatique de mail. Pas de scraping contraire aux CGU YouTube.
 8. Design Apple « Liquid Glass » : matériaux `.glass` (blur), hiérarchie par poids/taille, tracking négatif sur les gros titres, retour visuel au pointer-down, animations à ressort interruptibles (`motion` : `type:'spring', bounce:0` par défaut, rebond seulement après un geste avec élan), drag 1:1 avec offset de saisie, rubber-banding aux bords, respect de `prefers-reduced-motion`/`reduced-transparency`. Tokens CSS de `theme.css` (clair/sombre). Le CSS de ton module va dans `src/<dossier>/*.css` importé par tes composants.
 9. Rapport final (court) : fichiers créés, commandes Rust à enregistrer + permissions Tauri nécessaires, dépendances manquantes, ce qui n'a pas pu être testé.
+
+## Identifiants de vues (registerView / openView) — à respecter
+`studio` (accueil) · `scripts` · `stats` · `miniatures` · `titres` · `publication` · `mail` · `fichiers` · `connaissances` · `calendrier`. Réglages : `openSettings` via `navigate({type:'settings', panel})` ; panneaux `general`, `claude`, `connexions`, `mail`, `connaissances`, `images`.
+Panneaux latéraux : `claude` (Ctrl+J), `file` (aperçu fichier, props {hash}), `history` (versions).
+
+## Contrats ajoutés
+- `src/editor/active.ts` : `getActiveEditor()` (éditeur courant + pageId)
+- `src/claude/mcpApi.ts` : `listMcpTools`, `callMcpTool`
+- `src/knowledge/api.ts` : `getTranscript(videoIdOrUrl)`, `parseVideoId`
+- `src/assistants/scores.ts` : `scoreTitle`, `scoreThumbnail`, `scoreHook`
+- Le module database fournit `src/database/RowProperties.tsx` (`<RowProperties page/>`) que l'éditeur affiche sous le titre quand la page est une ligne de base, et `src/database/DatabaseView.tsx` (`<DatabaseView databaseId viewId? compact? />`) réutilisable (Studio).
+- `docs/methode-scripting.md` : méthode de scripting (Squiduu/MrBeast) — cœur des assistants script/titres.
