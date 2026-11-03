@@ -1,0 +1,87 @@
+name: Build Windows (.exe)
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    # Les instantanés de travail en cours ([wip]) ne déclenchent pas de build.
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[wip]') }}
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri -> target
+
+      - name: Dépendances
+        run: npm ci
+
+      - name: Tests
+        run: npx vitest run
+
+      - name: Build Tauri (NSIS)
+        shell: bash
+        env:
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        run: |
+          if [ -n "$TAURI_SIGNING_PRIVATE_KEY" ]; then
+            npx tauri build --bundles nsis --config '{"bundle":{"createUpdaterArtifacts":true}}'
+          else
+            echo "Pas de clé de signature : build sans artefacts de mise à jour."
+            npx tauri build --bundles nsis
+          fi
+
+      - name: Renommer l'installeur
+        shell: bash
+        run: |
+          cd src-tauri/target/release/bundle/nsis
+          f=$(ls *-setup.exe | head -1)
+          cp "$f" Prisme-Setup.exe
+          ls -la
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Prisme-Setup
+          path: |
+            src-tauri/target/release/bundle/nsis/Prisme-Setup.exe
+            src-tauri/target/release/bundle/nsis/*.sig
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+      - run: npm ci
+      - uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: Prisme ${{ github.ref_name }}
+          releaseDraft: false
+          includeUpdaterJson: true
+          args: --bundles nsis --config '{"bundle":{"createUpdaterArtifacts":true}}'

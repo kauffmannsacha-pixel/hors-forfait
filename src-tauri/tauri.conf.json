@@ -15,8 +15,10 @@
         "title": "Prisme",
         "width": 1400,
         "height": 900,
-        "transparent": true,
-        "decorations": true
+        "transparent": false,
+        "decorations": true,
+        "minWidth": 960,
+        "minHeight": 600
       }
     ],
     "security": {
@@ -52,7 +54,25 @@
     ],
     "windows": {
       "nsis": {
-        "installMode": "currentUser"
+        "installMode": "currentUser",
+        "languages": [
+          "French",
+          "English"
+        ],
+        "displayLanguageSelector": false
+      }
+    },
+    "publisher": "Prisme",
+    "shortDescription": "L'espace de travail des créateurs YouTube"
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEZEQUQ2MzAwQjYyRUUwQ0EKUldUSzRDNjJBR090L1ptcFpmRmhJTW9jakdTWjZROWVjZUgwOUpadUQ1Y0oxNzBTak1YOG9QTmUK",
+      "endpoints": [
+        "https://github.com/kauffmannsacha-pixel/hors-forfait/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
       }
     }
   }

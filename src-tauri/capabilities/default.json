@@ -1,1 +1,42 @@
-{ "identifier": "default", "windows": ["main"], "permissions": ["core:default", "sql:default", "sql:allow-execute", "sql:allow-select", "sql:allow-load"] }
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Permissions de la fenêtre principale de Prisme",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:event:default",
+    "core:webview:allow-internal-toggle-devtools",
+    "sql:default",
+    "sql:allow-load",
+    "sql:allow-execute",
+    "sql:allow-select",
+    "sql:allow-close",
+    {
+      "identifier": "http:default",
+      "allow": [{ "url": "https://*" }, { "url": "http://127.0.0.1:*" }, { "url": "http://localhost:*" }, { "url": "http://*" }]
+    },
+    "dialog:default",
+    "opener:default",
+    { "identifier": "opener:allow-open-path", "allow": [{ "path": "**" }] },
+    { "identifier": "opener:allow-reveal-item-in-dir", "allow": [{ "path": "**" }] },
+    { "identifier": "opener:allow-open-url", "allow": [{ "url": "https://*" }, { "url": "http://*" }, { "url": "mailto:*" }] },
+    "notification:default",
+    "process:default",
+    "updater:default",
+    "oauth:allow-start",
+    "oauth:allow-cancel",
+    "fs:default",
+    { "identifier": "fs:scope", "allow": [{ "path": "**" }] },
+    "fs:allow-read-file",
+    "fs:allow-read-text-file",
+    "fs:allow-write-file",
+    "fs:allow-write-text-file",
+    "fs:allow-exists",
+    "fs:allow-stat",
+    "fs:allow-mkdir",
+    "fs:allow-read-dir",
+    "fs:allow-copy-file",
+    "fs:allow-remove"
+  ]
+}
