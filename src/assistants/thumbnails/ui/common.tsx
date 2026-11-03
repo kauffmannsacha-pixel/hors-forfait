@@ -108,3 +108,10 @@ export function VaultPicker({ open, onClose, onPick }: { open: boolean; onClose:
 }
 export const Citations = ({ list }: { list: string[] }) => list.length ? <div className="th-col" style={{ gap: 2 }}>{list.map(c => <SourceCite key={c} text={c} />)}</div> : null;
 export const errText = (e: unknown) => (e instanceof Error ? e.message : String(e));
+/** Ouvre un lien dans le navigateur par défaut (plugin opener dans l'app). */
+export async function openExternal(url: string) {
+  if (typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window) {
+    try { const { openUrl } = await import('@tauri-apps/plugin-opener'); await openUrl(url); return; } catch { /* repli */ }
+  }
+  window.open(url, '_blank', 'noopener');
+}

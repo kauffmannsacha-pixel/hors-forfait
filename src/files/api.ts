@@ -21,3 +21,5 @@ export const setFilesImpl = (i: Impl) => { impl = i; };
 export const files = new Proxy({} as Impl, { get: (_t, k: keyof Impl) => impl[k] });
 /** Nom du nœud TipTap inline de fichier épinglé (attrs: hash, name, mime). Pour insérer : editor.chain().insertContent({type: FILE_PIN_NODE, attrs}) */
 export const FILE_PIN_NODE = 'filePin';
+/** Type de données d'un glisser-déposer HTML5 de puce (JSON {hash, name, mime, linked}) : déposé dans un éditeur, il insère la puce. */
+export const FILE_PIN_MIME = 'application/x-prisme-file-pin';
