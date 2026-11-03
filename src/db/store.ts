@@ -11,6 +11,22 @@ export interface Repo {
   listVersions(pageId: ID): Promise<PageVersion[]>;
   kvGet<T>(k: string): Promise<T | undefined>;
   kvSet(k: string, v: unknown): Promise<void>;
+  /** Recherche plein texte (FTS5) — disponible seulement avec SQLite (Tauri). */
+  search?(query: string, limit?: number): Promise<FtsHit[]>;
+}
+
+/** Résultat de la recherche plein texte FTS5 (rang bm25 : plus petit = plus pertinent). */
+export interface FtsHit { pageId: ID; title: string; snippet: string; rank: number }
+
+/** Transforme un texte libre en requête FTS5 sûre : chaque mot devient un préfixe entre guillemets (ET implicite). */
+export function ftsQuery(q: string): string {
+  return q.normalize('NFC')
+    .split(/[\s"'()*:^+\-.,;!?«»]+/)
+    .map(t => t.trim())
+    .filter(Boolean)
+    .slice(0, 12)
+    .map(t => `"${t.replace(/"/g, '""')}"*`)
+    .join(' ');
 }
 
 class LocalRepo implements Repo {
@@ -49,6 +65,19 @@ class SqliteRepo implements Repo {
   async listVersions(pageId: ID) { const r = await (await this.db).select<{ data: string }[]>('SELECT data FROM versions WHERE page_id=$1', [pageId]); return r.map(x => JSON.parse(x.data)); }
   async kvGet<T>(k: string) { const r = await (await this.db).select<{ v: string }[]>('SELECT v FROM kv WHERE k=$1', [k]); return r[0] ? (JSON.parse(r[0].v) as T) : undefined; }
   async kvSet(k: string, v: unknown) { await (await this.db).execute('INSERT OR REPLACE INTO kv(k,v) VALUES($1,$2)', [k, JSON.stringify(v)]); }
+  async search(query: string, limit = 50): Promise<FtsHit[]> {
+    const match = ftsQuery(query); if (!match) return [];
+    const rows = await (await this.db).select<{ page_id: string; title: string; snip: string; rank: number }[]>(
+      `SELECT page_id, title, snippet(fts, 2, '', '', '…', 12) AS snip, bm25(fts, 0.0, 8.0, 1.0) AS rank FROM fts WHERE fts MATCH $1 ORDER BY rank LIMIT $2`,
+      [match, limit]);
+    return rows.map(r => ({ pageId: r.page_id, title: r.title, snippet: r.snip, rank: r.rank }));
+  }
 }
 
 export const repo: Repo = isTauri ? new SqliteRepo() : new LocalRepo();
+
+/** Recherche plein texte : FTS5 en Tauri (pages classées par pertinence), `null` dans le navigateur (→ recherche en mémoire). */
+export async function searchFts(query: string, limit = 50): Promise<FtsHit[] | null> {
+  if (!repo.search || !query.trim()) return null;
+  try { return await repo.search(query, limit); } catch { return null; }
+}

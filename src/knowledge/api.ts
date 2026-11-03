@@ -26,8 +26,24 @@ export const principlesToPrompt = (ps: Principle[]) =>
 
 // ── Transcriptions (fournisseurs : sous-titres YouTube officiels de MES vidéos, outil MCP « transcript », import manuel) ──
 export interface TranscriptSegment { start: number; dur: number; text: string }
-export interface Transcript { videoId: string; language?: string; provider: 'youtube-captions' | 'mcp' | 'manual'; segments: TranscriptSegment[] }
+export interface Transcript { videoId: string; language?: string; provider: 'youtube-captions' | 'mcp' | 'manual'; segments: TranscriptSegment[]; /** false = horodatages estimés (texte brut sans temps) : ne pas les citer. */ timed?: boolean }
 let transcriptImpl: (videoIdOrUrl: string) => Promise<Transcript> = async () => { throw new Error('Aucune source de transcription configurée.'); };
 export const setTranscriptImpl = (f: typeof transcriptImpl) => { transcriptImpl = f; };
 export const getTranscript = (videoIdOrUrl: string) => transcriptImpl(videoIdOrUrl);
 export const parseVideoId = (s: string) => (/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/.exec(s)?.[1]) ?? (/^[\w-]{11}$/.test(s) ? s : null);
+
+// ── Ajouts du module knowledge (ajout seulement) ─────────────
+export const TOPICS: Topic[] = ['script', 'retention', 'hook', 'thumbnail', 'title', 'packaging', 'analytics', 'general'];
+export const TOPIC_LABELS: Record<Topic, string> = { script: 'Script', retention: 'Rétention', hook: 'Hook', thumbnail: 'Miniatures', title: 'Titres', packaging: 'Packaging', analytics: 'Analytics', general: 'Général' };
+/** URL de la source : vidéo YouTube horodatée (…watch?v=ID&t=SECONDES) ou lien du document. */
+export const sourceUrl = (s: Source): string | undefined =>
+  s.videoId ? `https://www.youtube.com/watch?v=${s.videoId}${s.timestamp != null ? `&t=${Math.max(0, Math.floor(s.timestamp))}` : ''}` : s.url;
+/** Ouvre la source dans le navigateur par défaut (plugin opener dans l'app). */
+export async function openSourceUrl(s: Source): Promise<void> {
+  const url = sourceUrl(s);
+  if (!url) throw new Error('Cette source n\'a pas de lien.');
+  if (typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window) {
+    const { openUrl } = await import('@tauri-apps/plugin-opener');
+    await openUrl(url);
+  } else window.open(url, '_blank', 'noopener');
+}

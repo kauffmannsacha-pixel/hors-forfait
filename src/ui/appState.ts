@@ -3,7 +3,7 @@ import { create } from 'zustand';
 import type { ID } from '../db/types';
 
 export type Route = { type: 'page'; id: ID } | { type: 'view'; id: string } | { type: 'settings'; panel?: string };
-export interface Toast { id: number; text: string; kind: 'info' | 'success' | 'warning' | 'error' }
+export interface Toast { id: number; text: string; kind: 'info' | 'success' | 'warning' | 'error'; /** Bouton d'action optionnel (ex. « Annuler »). */ action?: { label: string; run: () => void } }
 
 interface AppState {
   route: Route;
@@ -36,3 +36,20 @@ export function toast(text: string, kind: Toast['kind'] = 'info') {
 export let confirmAction: (message: string, opts?: { danger?: boolean; confirmLabel?: string }) => Promise<boolean> =
   async (message) => window.confirm(message);
 export const setConfirmImpl = (fn: typeof confirmAction) => { confirmAction = fn; };
+
+// ── Ajouts module UI ──
+/** Ouvre les Réglages (panneau optionnel : general, claude, connexions…). */
+export const openSettings = (panel?: string) => navigate({ type: 'settings', panel });
+/** Ouvre le panneau latéral, ou le ferme s'il affiche déjà ce panneau. */
+export const toggleSidePanel = (id: string, props?: Record<string, unknown>) =>
+  useApp.setState(s => ({ sidePanel: s.sidePanel?.id === id ? null : { id, props } }));
+export const openPalette = () => useApp.setState({ paletteOpen: true });
+export const closePalette = () => useApp.setState({ paletteOpen: false });
+export const setTheme = (theme: 'system' | 'light' | 'dark') => useApp.setState({ theme });
+/** Toast avec un bouton d'action (ex. « Annuler »). */
+export function toastAction(text: string, label: string, run: () => void, kind: Toast['kind'] = 'info') {
+  const id = ++tid;
+  useApp.setState(s => ({ toasts: [...s.toasts, { id, text, kind, action: { label, run } }] }));
+  setTimeout(() => dismissToast(id), 6000);
+}
+export const dismissToast = (id: number) => useApp.setState(s => ({ toasts: s.toasts.filter(t => t.id !== id) }));
