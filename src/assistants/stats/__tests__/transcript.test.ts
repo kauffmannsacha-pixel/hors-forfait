@@ -30,7 +30,8 @@ describe('nettoyage des sous-titres', () => {
     const toks = tokenize([{ start: 10, dur: 2, text: 'a bbb' }]);
     expect(toks.map(t => t.w)).toEqual(['a', 'bbb']);
     expect(toks[0].t0).toBe(10);
-    expect(toks[0].t1).toBeCloseTo(10.5);
+    // poids = longueur + 1 espace : « a » = 2/6 de la durée
+    expect(toks[0].t1).toBeCloseTo(10 + 2 / 3);
     expect(toks[1].t1).toBeCloseTo(12);
   });
 });
@@ -56,8 +57,8 @@ describe('phrases alignées sur l’axe du temps', () => {
       'Et là ?',
     ]);
     expect(s[0].start).toBe(0);
-    expect(s[1].start).toBeGreaterThan(0.4);
-    expect(s[1].start).toBeLessThan(0.5);
+    // « Salut. » occupe 7/22 des caractères du premier segment de 2 s
+    expect(s[1].start).toBeCloseTo((7 / 22) * 2, 6);
     expect(s[1].end).toBeCloseTo(4);
     expect(s[2].start).toBeCloseTo(4);
     expect(s[4].end).toBeCloseTo(12);

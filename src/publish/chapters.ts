@@ -145,13 +145,13 @@ export function scriptSections(page: { content?: unknown; meta?: Record<string, 
 }
 
 // ── Titres de chapitres ─────────────────────────────────────
-const STRUCTURAL = /^(hook|accroche|promesse|intro|introduction|intrigue|boucles?\s+ouvertes?|corps|d[ée]veloppement|re-?hooks?|relance|escalade|payoff|apog[ée]e|r[ée]compense|cta|appel\s+[àa]\s+l['’]action|conclusion|outro|objectif|enjeux|plan|teaser|foreshadowing|histoire|climax|fin)\b/i;
+const STRUCTURAL = /^(hook|accroche|promesse|intrigue|boucles?\s+ouvertes?|corps|d[ée]veloppement|re-?hooks?|relance|escalade|payoff|apog[ée]e|r[ée]compense|cta|appel\s+[àa]\s+l['’]action|objectif|enjeux|teaser|foreshadowing|climax)\b/i;
 const GENERIC: Record<string, string> = {
-  hook: 'Introduction', accroche: 'Introduction', intro: 'Introduction', introduction: 'Introduction', teaser: 'Introduction',
-  promesse: 'Le défi', objectif: 'Le défi', enjeux: 'Les enjeux', plan: 'Le plan', intrigue: 'Le début', histoire: "L'histoire",
+  hook: 'Introduction', accroche: 'Introduction', teaser: 'Introduction', foreshadowing: 'Introduction',
+  promesse: 'Le défi', objectif: 'Le défi', enjeux: 'Les enjeux', intrigue: 'Le début',
   corps: 'Le cœur de la vidéo', développement: 'Le cœur de la vidéo', developpement: 'Le cœur de la vidéo', escalade: 'Ça monte',
   payoff: 'Le résultat', apogée: 'Le résultat', apogee: 'Le résultat', climax: 'Le résultat', récompense: 'Le résultat', recompense: 'Le résultat',
-  cta: 'Pour finir', conclusion: 'Pour finir', outro: 'Pour finir', fin: 'Pour finir', relance: 'Rebondissement', rehook: 'Rebondissement', 're-hook': 'Rebondissement',
+  cta: 'Pour finir', relance: 'Rebondissement', rehook: 'Rebondissement', 're-hook': 'Rebondissement', rehooks: 'Rebondissement', 're-hooks': 'Rebondissement',
 };
 const cap = (s: string) => s ? s[0].toLocaleUpperCase('fr-FR') + s.slice(1) : s;
 function shorten(s: string, max = 48): string {
@@ -176,7 +176,7 @@ export function chapterTitle(sec: Pick<ScriptSection, 'title' | 'text'>): string
 export interface ChapterGen { chapters: Chapter[]; warnings: string[]; estimated: boolean }
 
 /** Minutages : explicites quand ils existent, sinon interpolés au nombre de mots (et recalés sur la durée réelle si connue). */
-export function sectionStarts(sections: ScriptSection[], wpm = DEFAULT_WPM, durationSec?: number | null): { starts: number[]; estimated: boolean } {
+export function sectionStarts(sections: ScriptSection[], wpm = DEFAULT_WPM, durationSec?: number | null): { starts: number[]; estimated: boolean; end: number } {
   const n = sections.length;
   const cum: number[] = []; let acc = 0;
   for (const s of sections) { cum.push(acc); acc += Math.max(0, s.words); }
@@ -188,7 +188,7 @@ export function sectionStarts(sections: ScriptSection[], wpm = DEFAULT_WPM, dura
     const est = (w: number) => (w / wpm) * 60;
     const estTotal = est(totalWords);
     const k = durationSec && estTotal > 0 ? durationSec / estTotal : 1;
-    return { starts: cum.map(w => Math.round(est(w) * k)), estimated: true };
+    return { starts: cum.map(w => Math.round(est(w) * k)), estimated: true, end: durationSec || Math.round(estTotal) };
   }
   if (anchors[0].i !== 0) anchors.unshift({ i: 0, t: 0, w: 0 });
   const last = anchors[anchors.length - 1];
@@ -200,7 +200,7 @@ export function sectionStarts(sections: ScriptSection[], wpm = DEFAULT_WPM, dura
     for (const x of ends) { if (x.i <= i) a = x; if (x.i > i) { b = x; break; } }
     return Math.round(b.w === a.w ? a.t : a.t + ((cum[i] - a.w) / (b.w - a.w)) * (b.t - a.t));
   });
-  return { starts, estimated };
+  return { starts, estimated, end: Math.round(endT) };
 }
 
 export function normalizeChapters(chapters: Chapter[], durationSec?: number | null, minSec = MIN_CHAPTER_SEC): Chapter[] {
@@ -220,9 +220,9 @@ export function generateChapters(sections: ScriptSection[], opts: { wpm?: number
   const usable = sections.filter(s => s.words > 0 || s.text.trim() || s.start != null);
   const warnings: string[] = [];
   if (!usable.length) return { chapters: [], warnings: ['Le script ne contient aucune section (ajoute des intertitres).'], estimated: false };
-  const { starts, estimated } = sectionStarts(usable, opts.wpm ?? DEFAULT_WPM, opts.durationSec);
+  const { starts, estimated, end } = sectionStarts(usable, opts.wpm ?? DEFAULT_WPM, opts.durationSec);
   const raw = usable.map((s, i) => ({ start: starts[i], title: chapterTitle(s) }));
-  const chapters = normalizeChapters(raw, opts.durationSec);
+  const chapters = normalizeChapters(raw, opts.durationSec || end || null);
   if (raw.length > chapters.length) warnings.push(`${raw.length - chapters.length} section(s) trop courte(s) (< ${MIN_CHAPTER_SEC} s) fusionnée(s) avec la précédente.`);
   if (estimated) warnings.push(`Minutages estimés à partir du nombre de mots (≈ ${opts.wpm ?? DEFAULT_WPM} mots/min)${opts.durationSec ? ', recalés sur la durée réelle de la vidéo' : ''} : vérifie-les après le montage.`);
   if (chapters.length < MIN_CHAPTERS) warnings.push('Moins de 3 chapitres : YouTube ne les affichera pas.');

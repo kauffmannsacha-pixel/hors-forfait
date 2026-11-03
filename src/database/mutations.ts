@@ -329,13 +329,14 @@ export const reorderOptions = (dbId: ID, propId: string, ids: string[]) => mutat
 // ── Lignes ───────────────────────────────────────────────────
 const isEmptyStored = (v: unknown) => v === undefined || v === null || v === '' || (Array.isArray(v) && v.length === 0);
 
-export async function createRow(dbId: ID, init: { title?: string; props?: Record<string, unknown>; order?: number; icon?: string } = {}): Promise<Page> {
+export async function createRow(dbId: ID, init: { title?: string; props?: Record<string, unknown>; order?: number; icon?: string; content?: unknown } = {}): Promise<Page> {
   const { title: t, ...rest } = init.props ?? {};
   const props: Record<string, unknown> = {};
   for (const [k, v] of Object.entries(rest)) if (!isEmptyStored(v)) props[k] = v;
   const page = await createPage({
     parentId: dbId, kind: 'page', title: init.title ?? (typeof t === 'string' ? t : ''), props,
     ...(init.order !== undefined ? { order: init.order } : {}), ...(init.icon ? { icon: init.icon } : {}),
+    ...(init.content ? { content: init.content } : {}),
   });
   // Relations bidirectionnelles pré-remplies (ex. filtre « contient »).
   const s = cachedSchema(dbId);

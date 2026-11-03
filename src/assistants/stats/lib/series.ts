@@ -72,9 +72,13 @@ export function hourlySeries(snaps: Snapshot[], publishedMs: number, hours = 48,
     if (T <= now + 60_000) {
       while (j < anchors.length - 2 && anchors[j + 1].t <= T) j++;
       const a = anchors[j], b = anchors[j + 1];
+      const near = (x: { t: number } | undefined) => !!x && Math.abs(x.t - T) <= 10 * 60_000;
+      const lastA = anchors[anchors.length - 1];
       if (h === 0) cum = 0;
-      else if (b && T >= a.t && T <= b.t && b.t - a.t <= maxGap) cum = a.views + ((T - a.t) / Math.max(1, b.t - a.t)) * (b.views - a.views);
-      else if (Math.abs(anchors[anchors.length - 1].t - T) <= 10 * 60_000) cum = anchors[anchors.length - 1].views;
+      else if (near(a)) cum = a.views;
+      else if (b && near(b)) cum = b.views;
+      else if (b && T > a.t && T < b.t && b.t - a.t <= maxGap) cum = a.views + ((T - a.t) / (b.t - a.t)) * (b.views - a.views);
+      else if (near(lastA)) cum = lastA.views;
     }
     const measured = snaps.some(s => Math.abs(s.t - T) <= 10 * 60_000);
     const prev = out[out.length - 1];

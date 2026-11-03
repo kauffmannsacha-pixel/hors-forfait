@@ -1,6 +1,7 @@
 // Persistance kv du miniatureur.
 import { repo } from '../../../db/store';
 import type { ConceptBatch, MyAnalysis, RefEntry, ThumbRecord, ThumbVersion, VersionIndexEntry } from './types';
+import type { NicheSynthesis } from './vision';
 
 export const KV = {
   library: 'thumb:library',            // Record<videoId, ThumbRecord> — analyses en cache
@@ -12,6 +13,7 @@ export const KV = {
   versionsIndex: 'thumb:versions:index',
   versions: (videoId: string) => `thumb:versions:${videoId}`,
   abtests: 'abtests',                  // écrit par le module publication (lecture seule ici)
+  syntheses: 'thumb:syntheses',        // Record<niche, NicheSynthesis>
 } as const;
 
 export interface ChannelStat { title: string; subscribers?: number; fetchedAt: number }
@@ -37,3 +39,5 @@ export async function saveVersions(videoId: string, title: string, v: ThumbVersi
 }
 export const loadVersionsIndex = () => get<VersionIndexEntry[]>(KV.versionsIndex, []);
 export const loadAbTestsRaw = () => get<unknown>(KV.abtests, undefined);
+export const loadSyntheses = () => get<Record<string, NicheSynthesis>>(KV.syntheses, {});
+export const saveSyntheses = (s: Record<string, NicheSynthesis>) => repo.kvSet(KV.syntheses, s);

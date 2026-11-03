@@ -21,7 +21,7 @@ export function truncateTitle(title: string, max: number): { visible: string; hi
 }
 
 const strip = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[’‘`]/g, "'");
-const tokens = (s: string) => strip(s).match(/[a-z0-9%$€]+(?:'[a-z]+)?/g) ?? [];
+const tokens = (s: string): string[] => strip(s).match(/[a-z0-9%$€]+(?:'[a-z]+)?/g) ?? [];
 
 export const POWER_WORDS: Record<Lang, string[]> = {
   fr: ['secret', 'secrets', 'secrete', 'interdit', 'interdite', 'illegal', 'illegale', 'impossible', 'incroyable', 'jamais', 'personne', 'ultime', 'meilleur', 'meilleure',

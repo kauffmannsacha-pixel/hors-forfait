@@ -99,7 +99,8 @@ export interface AbPeriod {
 }
 export interface AbVariant { id: string; label: string; title: string; thumbnailHash?: string; thumbnailPath?: string; periods: AbPeriod[] }
 export interface AbDaily { date: string /* AAAA-MM-JJ, heure du Pacifique */; views: number; avgViewDuration?: number; impressions?: number; ctr?: number }
-export interface AbWinner { variantId: string; confidence: number; metric: 'ctr' | 'views'; decidedAt: number; applied: boolean; lift: number }
+/** `index` et `thumbnailHash` sont lus par l'assistant Miniatures (lecture seule de kv 'abtests'). */
+export interface AbWinner { index: number; variantId: string; thumbnailHash?: string; title?: string; confidence: number; metric: 'ctr' | 'views'; decidedAt: number; applied: boolean; lift: number }
 export interface AbTest {
   id: string;
   videoId: string; channelId: string; channelTitle: string; videoTitle: string;

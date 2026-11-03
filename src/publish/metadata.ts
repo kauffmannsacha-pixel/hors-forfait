@@ -14,7 +14,7 @@ export const sanitizeYtText = (s: string) => s.replace(/</g, '‹').replace(/>/g
 
 /** Découpe une saisie (virgules, retours à la ligne, #) en tags propres et dédoublonnés. */
 export function normalizeTags(input: string | string[]): string[] {
-  const parts = (Array.isArray(input) ? input : input.split(/[,\n;]/)).map(t => t.replace(/^#+/, '').replace(/[<>"]/g, '').replace(/\s+/g, ' ').trim()).filter(Boolean);
+  const parts = (Array.isArray(input) ? input : input.split(/[,\n;]/)).map(t => t.trim().replace(/^#+/, '').replace(/[<>"]/g, '').replace(/\s+/g, ' ').trim()).filter(Boolean);
   const seen = new Set<string>(); const out: string[] = [];
   for (const p of parts) { const k = p.toLocaleLowerCase('fr-FR'); if (!seen.has(k)) { seen.add(k); out.push(p); } }
   return out;

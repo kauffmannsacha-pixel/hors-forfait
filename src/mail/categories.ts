@@ -91,9 +91,10 @@ export function parseTriageResponse(raw: unknown, cats: MailCategory[], expected
   rows.forEach((r, i) => {
     if (!r || typeof r !== 'object') return;
     const o = r as Record<string, unknown>;
-    let id = typeof o.id === 'string' || typeof o.id === 'number' ? String(o.id) : undefined;
-    if (!id || !allowed.has(id)) id = expectedIds[i] && rows.length === expectedIds.length && !allowed.has(String(o.id ?? '')) ? expectedIds[i] : id;
-    if (!id || !allowed.has(id) || out[id]) return;
+    let id = o.id !== undefined && o.id !== null ? String(o.id).trim() : '';
+    // id absent ou inconnu : correspondance par position si Claude a répondu pour chaque mail
+    if (!allowed.has(id) && rows.length === expectedIds.length) id = expectedIds[i];
+    if (!allowed.has(id) || out[id]) return;
     const reason = typeof o.reason === 'string' ? o.reason : typeof o.raison === 'string' ? o.raison : undefined;
     out[id] = {
       category: normalizeCategory(o.category ?? o.categorie ?? o['catégorie'], cats),

@@ -65,7 +65,7 @@ export function transcriptStructure(sentences: Sentence[], durationSec: number, 
     hookText,
     hookWords: wordCount(hookText),
     hookQuestions: (hookText.match(/\?/g) ?? []).length,
-    hookNumbers: (hookText.match(/\d+(?:[.,]\d+)?/g) ?? []).length,
+    hookNumbers: (hookText.match(/\d{1,3}(?:[ \u00a0\u202f]\d{3})+(?:[.,]\d+)?|\d+(?:[.,]\d+)?/g) ?? []).length,
     paceBuckets: buckets.map(w => w / bucketMin),
   };
 }
@@ -75,11 +75,14 @@ const STOP = new Set('le la les un une des du de d l à au aux et ou en dans sur
 /** Mots-clés d'un titre (et des tags) pour chercher des vidéos de référence du même thème. */
 export function keywordsFromTitle(title: string, tags: string[] = [], max = 5): string {
   const norm = (s: string) => s
-    .replace(/[\p{Extended_Pictographic}‍️]/gu, ' ')
-    .replace(/[#@]/g, ' ')
+    .replace(/[’`]/g, '\'')
+    .replace(/[\p{Extended_Pictographic}\u200d\ufe0f]/gu, ' ')
     .replace(/[^\p{L}\p{N}' -]/gu, ' ')
     .toLowerCase();
-  const words = norm(title).split(/[\s'-]+/).filter(w => w.length > 2 && !STOP.has(w) && !/^\d+$/.test(w));
+  const words = norm(title)
+    .split(/[\s']+/)
+    .map(w => w.replace(/^-+|-+$/g, ''))
+    .filter(w => w.length > 2 && !STOP.has(w) && !/^\d+$/.test(w));
   const uniq: string[] = [];
   for (const w of words) if (!uniq.includes(w)) uniq.push(w);
   for (const t of tags) {

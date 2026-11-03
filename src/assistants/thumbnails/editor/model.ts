@@ -10,7 +10,7 @@ export interface ImageLayer extends Base { type: 'image'; src: ImageSrc; natW: n
 export interface TextStyle {
   font: string; size: number; weight: number; color: string; uppercase: boolean; align: 'left' | 'center' | 'right'; lineHeight: number; letterSpacing: number;
   stroke: { enabled: boolean; color: string; width: number };
-  shadow: { enabled: boolean; color: string; blur: number; dx: number; dy: number };
+  shadow: { enabled: boolean; color: string; opacity: number; blur: number; dx: number; dy: number };
   glow: { enabled: boolean; color: string; blur: number; strength: number };
 }
 export interface TextLayer extends Base, TextStyle { type: 'text'; text: string; x: number; y: number }
@@ -27,7 +27,7 @@ export const emptyDoc = (): EditorDoc => ({ version: 1, background: '#101014', l
 export const DEFAULT_TEXT_STYLE: TextStyle = {
   font: 'Impact', size: 150, weight: 900, color: '#ffffff', uppercase: true, align: 'center', lineHeight: 1.02, letterSpacing: 0,
   stroke: { enabled: true, color: '#000000', width: 14 },
-  shadow: { enabled: true, color: 'rgba(0,0,0,0.6)', blur: 24, dx: 0, dy: 10 },
+  shadow: { enabled: true, color: '#000000', opacity: 0.6, blur: 24, dx: 0, dy: 10 },
   glow: { enabled: false, color: '#ffd60a', blur: 40, strength: 2 },
 };
 export function makeText(text = 'TEXTE', patch: Partial<TextLayer> = {}): TextLayer {

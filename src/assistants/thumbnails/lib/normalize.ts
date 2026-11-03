@@ -43,8 +43,11 @@ export function normalizeLayout(v: unknown): Layout {
   if (/centr|center|symetr/.test(s)) return 'centrée';
   return 'autre';
 }
-/** Nombre de mots d'un texte incrusté (chiffres et symboles « $ », « % » comptés comme mots s'ils sont isolés). */
-export const countWords = (t: string) => t.split(/[\s\n\r]+/).filter(w => /[\p{L}\p{N}$€%!?]/u.test(w)).length;
+/** Nombre de mots d'un texte incrusté : « 100 000 $ » compte pour 1, la ponctuation seule pour 0. */
+export const countWords = (t: string) => t
+  .replace(/(\d)[\s\u00a0\u202f](?=\d{3}(?!\d))/g, '$1')
+  .replace(/(\d)\s*([$€£%])/g, '$1$2').replace(/([$€£])\s*(\d)/g, '$1$2')
+  .split(/\s+/).filter(w => /[\p{L}\p{N}]/u.test(w)).length;
 /** Garde au plus n mots. */
 export const limitWords = (t: string, n: number) => t.split(/\s+/).filter(Boolean).slice(0, n).join(' ');
 

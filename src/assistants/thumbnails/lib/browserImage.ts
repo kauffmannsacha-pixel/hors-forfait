@@ -106,6 +106,7 @@ export async function toVisionJpeg(src: Drawable, opts: { maxW?: number; crop?: 
 export function smallPreviewCanvas(src: Drawable, crop?: Rect, factor = 2): HTMLCanvasElement {
   const { w: sw, h: sh } = sizeOf(src); const r = crop ?? { x: 0, y: 0, w: sw, h: sh };
   const small = makeCanvas(168, 94); const sctx = ctx2d(small);
+  sctx.fillStyle = '#000'; sctx.fillRect(0, 0, 168, 94);
   sctx.imageSmoothingQuality = 'high'; sctx.drawImage(src, r.x, r.y, r.w, r.h, 0, 0, 168, 94);
   if (factor === 1) return small;
   const big = makeCanvas(168 * factor, 94 * factor); const bctx = ctx2d(big);

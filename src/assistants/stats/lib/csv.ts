@@ -38,7 +38,7 @@ export function csvCell(v: CsvValue, o: CsvOptions = {}): string {
 export function toCSV(header: string[], rows: CsvValue[][], o: CsvOptions = {}): string {
   const opt = { ...DEFAULTS, ...o };
   const lines = [header, ...rows].map(r => r.map(c => csvCell(c, opt)).join(opt.sep));
-  return (opt.bom ? '﻿' : '') + lines.join(opt.newline) + opt.newline;
+  return (opt.bom ? '\uFEFF' : '') + lines.join(opt.newline) + opt.newline;
 }
 
 /** Analyse un CSV (guillemets, guillemets doublés, retours à la ligne dans une cellule, BOM). */

@@ -27,6 +27,7 @@ export const Callout = Node.create({
 
   parseHTML() {
     return [
+      { tag: 'aside[data-emoji]', getAttrs: el => ({ emoji: (el as HTMLElement).getAttribute('data-emoji') || '💡', color: (el as HTMLElement).getAttribute('data-color') || 'default' }) },
       { tag: 'div[data-type="callout"]', contentElement: '.callout-content' },
       // Export Notion : <aside>💡 texte</aside>
       {
