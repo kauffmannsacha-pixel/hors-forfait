@@ -1,4 +1,3 @@
----
 
 # Expert scripting YouTube (méthode Squiduu)
 
