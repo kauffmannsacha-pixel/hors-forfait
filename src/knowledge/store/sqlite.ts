@@ -97,6 +97,7 @@ export class SqliteKnStore implements KnStore {
     if (!items.length) return;
     await this.insertMany('kn_embeddings', ['principle_id', 'model', 'dim', 'vec'], items.map(i => [i.id, model, i.vec.length, vecToBase64(i.vec)]));
   }
+  async deleteEmbeddings(ids: string[]) { if (ids.length) await this.deleteIn('kn_embeddings', 'principle_id', ids); }
   async clearEmbeddings() { await this.db.execute('DELETE FROM kn_embeddings'); }
 
   async getTranscript(videoId: string): Promise<Transcript | undefined> {

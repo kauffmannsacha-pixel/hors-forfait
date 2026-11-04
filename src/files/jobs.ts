@@ -5,7 +5,7 @@ import { toast } from '../ui/appState';
 import { errMsg, type Progress } from './backend';
 import { plural } from './kinds';
 
-export interface ImportJob { id: string; name: string; done: number; total: number; status: 'running' | 'done' | 'error'; startedAt: number }
+export interface ImportJob { id: string; name: string; done: number; total: number; status: 'running' | 'done' | 'error'; startedAt: number; endedAt?: number }
 export const useImportJobs = create<{ jobs: ImportJob[] }>(() => ({ jobs: [] }));
 
 const patch = (id: string, p: Partial<ImportJob>) => useImportJobs.setState(s => ({ jobs: s.jobs.map(j => (j.id === id ? { ...j, ...p } : j)) }));
@@ -22,8 +22,8 @@ export function trackJob(name: string) {
       if (now - last < 80 && done < total) return; // limite les rendus
       last = now; patch(id, { done, total });
     }) as Progress,
-    finish() { patch(id, { status: 'done' }); drop(id, 900); },
-    fail() { patch(id, { status: 'error' }); drop(id, 2500); },
+    finish() { patch(id, { status: 'done', endedAt: Date.now() }); drop(id, 900); },
+    fail() { patch(id, { status: 'error', endedAt: Date.now() }); drop(id, 2500); },
   };
 }
 

@@ -69,7 +69,7 @@ export function parseCSV(text: string, sep = ','): string[][] {
 /** Nom de fichier sûr : « Rétention — Ma vidéo » → « retention-ma-video ». */
 export function safeFilename(s: string, max = 60): string {
   const base = s
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')

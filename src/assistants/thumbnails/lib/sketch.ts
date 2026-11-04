@@ -70,10 +70,12 @@ function item(it: SketchItem, c: Concept): string {
 }
 
 /** SVG complet (viewBox 160×90) : fond, éléments dans l'ordre, repères des tiers et zone de durée. */
-export function sketchSvg(c: Concept, opts: { guides?: boolean } = {}): string {
+export function sketchSvg(c: Concept, opts: { guides?: boolean; exclude?: SketchItem['kind'][] } = {}): string {
   const order: SketchItem['kind'][] = ['fond', 'split', 'halo', 'personne', 'objet', 'visage', 'cercle', 'fleche', 'texte'];
+  const ex = new Set(opts.exclude ?? []);
   const items = [...c.sketch].sort((a, b) => order.indexOf(a.kind) - order.indexOf(b.kind));
   if (c.text && !items.some(i => i.kind === 'texte')) items.push({ kind: 'texte', x: 0.04, y: 0.06, w: 0.5, h: 0.24, label: c.text });
+  for (let i = items.length - 1; i >= 0; i--) if (ex.has(items[i].kind)) items.splice(i, 1);
   const halo = col(c.colors[2] ?? c.colors[1], '#ffffff');
   const guides = opts.guides !== false
     ? `<g stroke="rgba(255,255,255,.28)" stroke-width=".35" stroke-dasharray="1.6 1.6"><line x1="${W / 3}" y1="0" x2="${W / 3}" y2="${H}"/><line x1="${(2 * W) / 3}" y1="0" x2="${(2 * W) / 3}" y2="${H}"/><line x1="0" y1="${H / 3}" x2="${W}" y2="${H / 3}"/><line x1="0" y1="${(2 * H) / 3}" x2="${W}" y2="${(2 * H) / 3}"/></g><rect x="${W - 21}" y="${H - 10}" width="18" height="7" rx="1.2" fill="rgba(0,0,0,.72)"/><text x="${W - 12}" y="${H - 5}" font-size="4.3" font-family="system-ui, sans-serif" font-weight="600" text-anchor="middle" fill="#fff">12:34</text>`

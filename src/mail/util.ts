@@ -82,10 +82,15 @@ export function colorFor(seed: string): string {
 // ── Sujets ────────────────────────────────────────────────────
 const PREFIX = /^\s*((re|r[ée]f|aw|antw|sv|vs|fw|fwd|tr|wg|rv|enc)\s*(\[\d+\])?\s*:\s*)+/i;
 export const hasReplyPrefix = (s: string) => PREFIX.test(s);
+const EXT_TAG = /^\[(ext|externe|external|externo)\]\s*/i;
 export function normalizeSubject(s: string): string {
   let t = (s ?? '').replace(/\s+/g, ' ').trim();
-  for (let i = 0; i < 5 && PREFIX.test(t); i++) t = t.replace(PREFIX, '').trim();
-  return t.replace(/^\[[^\]]{1,40}\]\s*/, (m) => (/^\[(ext|externe|external)\]/i.test(m) ? '' : m)).trim();
+  for (let i = 0; i < 6; i++) {
+    const before = t;
+    t = t.replace(EXT_TAG, '').replace(PREFIX, '').trim();
+    if (t === before) break;
+  }
+  return t;
 }
 
 // ── Base64 ────────────────────────────────────────────────────

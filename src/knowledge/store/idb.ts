@@ -55,6 +55,7 @@ export class IdbKnStore implements KnStore {
   async putEmbeddings(model: string, items: { id: string; vec: Float32Array }[]) {
     await this.putAll('embeddings', items.map(i => ({ id: i.id, model, vec: i.vec.slice().buffer })));
   }
+  async deleteEmbeddings(ids: string[]) { await this.delAll('embeddings', ids); }
   async clearEmbeddings() { await this.clear('embeddings'); }
   async getTranscript(videoId: string) {
     const r = (await req(this.db.transaction('transcripts', 'readonly').objectStore('transcripts').get(videoId))) as TrRow | undefined;

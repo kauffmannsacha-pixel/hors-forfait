@@ -1,0 +1,1911 @@
+{
+ "version": 1,
+ "generatedAt": "2026-11-03",
+ "note": "Pré-remplissage : principes de docs/methode-scripting.md (kind manual) et de transcriptions écrites publiques du Creator Science Podcast (kind document, URL de la page, sans horodatage car aucun n'est donné pour ces passages). Aucune transcription YouTube n'a pu être récupérée lors de la construction : les vidéos de « videos » (IDs vérifiés) sont analysées à la première mise à jour.",
+ "principles": [
+  {
+   "id": "seed-m-001",
+   "topic": "retention",
+   "title": "Chaque seconde donne envie de voir la suivante",
+   "text": "Le spectateur peut partir à tout moment : le script est là pour l'en empêcher. Chaque seconde doit lui donner une raison de regarder la suivante.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Principe central"
+   }
+  },
+  {
+   "id": "seed-m-002",
+   "topic": "packaging",
+   "title": "Valider l'idée avant d'écrire",
+   "text": "Selon Squiduu, l'idée représente 90 % du succès : on la valide avant d'écrire la moindre ligne.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Étape 0"
+   }
+  },
+  {
+   "id": "seed-m-003",
+   "topic": "packaging",
+   "title": "Une idée compréhensible en 2 secondes",
+   "text": "Premier test : n'importe qui comprend immédiatement le concept et l'objectif (ex. « je dessine un inconnu au hasard et je dois le retrouver dans la vraie vie »).",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Étape 0"
+   }
+  },
+  {
+   "id": "seed-m-004",
+   "topic": "packaging",
+   "title": "Une idée remarquable",
+   "text": "Deuxième test : le concept semble fou ou inédit, quelque chose que personne ne fait. « 100 jours dans le métaverse » bat « 1 heure sur Omegle ».",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Étape 0"
+   }
+  },
+  {
+   "id": "seed-m-005",
+   "topic": "packaging",
+   "title": "Le spectateur doit regretter de ne pas avoir cliqué",
+   "text": "Test MrBeast : si le spectateur ne clique pas, il doit se demander toute la journée ce qu'il a manqué.",
+   "source": {
+    "kind": "manual",
+    "creator": "MrBeast",
+    "videoTitle": "Méthode de scripting · Étape 0"
+   }
+  },
+  {
+   "id": "seed-m-006",
+   "topic": "packaging",
+   "title": "Une mauvaise idée ne se rattrape pas",
+   "text": "Si l'idée échoue aux tests, on change d'idée sans écrire : aucune écriture ni aucun montage ne la sauve (« même avec la meilleure écriture, déplier une serviette reste inintéressant »).",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Étape 0"
+   }
+  },
+  {
+   "id": "seed-m-007",
+   "topic": "packaging",
+   "title": "Le script découle du packaging",
+   "text": "Fixer le titre et la miniature avant d'écrire : le script doit honorer exactement leur promesse.",
+   "source": {
+    "kind": "manual",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Méthode de scripting · Étape 0 et sources"
+   }
+  },
+  {
+   "id": "seed-m-008",
+   "topic": "script",
+   "title": "Écrire la fin avant le début",
+   "text": "Avant d'écrire, formuler le concept en une phrase intrigante et connaître le payoff final : on écrit la fin avant le début.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Étape 0"
+   }
+  },
+  {
+   "id": "seed-m-009",
+   "topic": "hook",
+   "title": "La première seconde arrête le scroll",
+   "text": "Étape 1 de la recette d'écriture : le hook, la toute première seconde, doit stopper le défilement.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Recette en 5 étapes"
+   }
+  },
+  {
+   "id": "seed-m-010",
+   "topic": "script",
+   "title": "Annoncer l'objectif tôt, révéler le résultat à la fin",
+   "text": "Étape 2 (foreshadowing) : annoncer très tôt ce qu'on va accomplir ; le résultat n'est révélé qu'à la fin.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Recette en 5 étapes"
+   }
+  },
+  {
+   "id": "seed-m-011",
+   "topic": "script",
+   "title": "Une histoire qui progresse sans cesse",
+   "text": "Étape 3 : entre l'objectif et sa réalisation, le spectateur doit toujours sentir une progression, d'obstacle en solution.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Recette en 5 étapes"
+   }
+  },
+  {
+   "id": "seed-m-012",
+   "topic": "script",
+   "title": "Une récompense satisfaisante, jamais mensongère",
+   "text": "Étape 4 : l'objectif s'accomplit de la façon la plus satisfaisante possible. Ne jamais mentir ni décevoir le spectateur.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Recette en 5 étapes"
+   }
+  },
+  {
+   "id": "seed-m-013",
+   "topic": "script",
+   "title": "Finir sur un moment qui fait réagir",
+   "text": "Étape 5 : garder pour la fin un moment inattendu ou drôle qui pousse l'audience à commenter.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Recette en 5 étapes"
+   }
+  },
+  {
+   "id": "seed-m-014",
+   "topic": "hook",
+   "title": "Hook en moins de 5 s qui confirme la miniature",
+   "text": "Pas de « salut à tous », pas de présentation : la première phrase confirme tout de suite le titre et la miniature.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 1 — Hook"
+   }
+  },
+  {
+   "id": "seed-m-015",
+   "topic": "hook",
+   "title": "Hook « problème + prétexte »",
+   "text": "Partir d'un problème qui justifie le concept : « J'ai oublié de payer ma facture Internet… ma seule solution, c'est de pirater le Wi-Fi du voisin. »",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 1 — Hook"
+   }
+  },
+  {
+   "id": "seed-m-016",
+   "topic": "hook",
+   "title": "Hook « cold open » sur la meilleure réaction",
+   "text": "Ouvrir sur la réaction la plus forte (« T'habites à Narbonne ! — WESH, comment tu sais ?! ») puis poser le concept en une phrase.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 1 — Hook"
+   }
+  },
+  {
+   "id": "seed-m-017",
+   "topic": "hook",
+   "title": "Hook en quiz interactif",
+   "text": "Faire jouer le spectateur dès la première seconde : « Entre ces deux vidéos, laquelle est générée par IA ? … Les deux. »",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 1 — Hook"
+   }
+  },
+  {
+   "id": "seed-m-018",
+   "topic": "hook",
+   "title": "Hook « constat choc + inversion »",
+   "text": "Chercher l'ironie du concept : « Les IA volent le travail des humains… donc je vais voler le travail des IA ».",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 1 — Hook"
+   }
+  },
+  {
+   "id": "seed-m-019",
+   "topic": "script",
+   "title": "Objectif, enjeux et plan avant 30 secondes",
+   "text": "Dire ce qu'on va faire, pourquoi c'est risqué et ce qu'on ne sait pas encore (« sans me faire cramer… si possible »), le tout avant 30 s.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 2 — Objectif et enjeux"
+   }
+  },
+  {
+   "id": "seed-m-020",
+   "topic": "retention",
+   "title": "Annoncer le plan détaillé",
+   "text": "Exposer le plan (« voici le plan infaillible : … ») : le spectateur qui comprend le plan veut voir s'il va marcher.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 2 — Objectif et enjeux"
+   }
+  },
+  {
+   "id": "seed-m-021",
+   "topic": "script",
+   "title": "Des enjeux chiffrés et concrets",
+   "text": "Remplacer le vague par des chiffres et des conséquences concrètes : 10 000 personnes, 100 €, top 2 France, 2 ans de prison.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 2 — Objectif et enjeux"
+   }
+  },
+  {
+   "id": "seed-m-022",
+   "topic": "retention",
+   "title": "Liste : teaser le sommaire, du plus petit au plus gros",
+   "text": "Dans une compilation, annoncer dès l'intro les moments les plus forts, commencer par le plus petit (« mais pour l'instant, on commence par… ») et garder le plus gros pour la fin.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 3 — Teaser du sommaire"
+   }
+  },
+  {
+   "id": "seed-m-023",
+   "topic": "retention",
+   "title": "Des boucles ouvertes en chaîne",
+   "text": "Chaque section ouvre une nouvelle question avant de refermer la précédente.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 4 — Boucles ouvertes"
+   }
+  },
+  {
+   "id": "seed-m-024",
+   "topic": "retention",
+   "title": "Annoncer les boucles à voix haute",
+   "text": "Formules explicites : « Vous verrez plus tard dans cette vidéo… », « Retenez bien ça, on va y revenir », « Mais avant ça… ».",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 4 — Boucles ouvertes"
+   }
+  },
+  {
+   "id": "seed-m-025",
+   "topic": "retention",
+   "title": "Jamais toutes les questions résolues avant la fin",
+   "text": "Le premier moment sans question ouverte est celui où le spectateur part : le repérer dans le script et le corriger.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 4 et checklist"
+   }
+  },
+  {
+   "id": "seed-m-026",
+   "topic": "retention",
+   "title": "Fils parallèles : lancer une action et y revenir",
+   "text": "Lancer une action longue en fond et y revenir (« Pendant qu'Awen tente de pirater mon Instagram, on fait une autre expérience ») : tension continue, zéro temps mort.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 5 — Fils parallèles"
+   }
+  },
+  {
+   "id": "seed-m-027",
+   "topic": "script",
+   "title": "Escalade par paliers",
+   "text": "Tester petit avant de passer au gros : un pote, puis un deuxième pote avec une arme de plus, puis 10 000 personnes.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 6 — Escalade"
+   }
+  },
+  {
+   "id": "seed-m-028",
+   "topic": "script",
+   "title": "Le meilleur moment jamais au début",
+   "text": "Ne jamais placer le meilleur moment en ouverture, ni enchaîner deux paliers d'intensité égale.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 6 — Escalade"
+   }
+  },
+  {
+   "id": "seed-m-029",
+   "topic": "script",
+   "title": "Écrire les échecs et les obstacles",
+   "text": "Un plan qui marche du premier coup donne une vidéo plate : écrire les galères (les mots de passe courants échouent un à un, le site plante, on se fait griller).",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 6 — Escalade"
+   }
+  },
+  {
+   "id": "seed-m-030",
+   "topic": "retention",
+   "title": "Chaque obstacle est une mini-boucle",
+   "text": "Un obstacle ouvre une question dont la solution est la récompense : enchaîner ces mini-boucles maintient l'attention.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 6 — Escalade"
+   }
+  },
+  {
+   "id": "seed-m-031",
+   "topic": "script",
+   "title": "Expliquer la technique en une phrase drôle",
+   "text": "Rendre chaque notion technique simple et légère en une phrase (« brute force… c'est dans le nom »).",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 6 — Escalade"
+   }
+  },
+  {
+   "id": "seed-m-032",
+   "topic": "script",
+   "title": "Setup → payoff : planter tôt, récolter tard",
+   "text": "Planter un élément au début et le récolter plus tard : le bouton dont on n'a plus parlé, l'indice visible que personne n'a remarqué.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 7 — Setup et payoff"
+   }
+  },
+  {
+   "id": "seed-m-033",
+   "topic": "script",
+   "title": "Variante coulisses : le résultat, puis le trucage",
+   "text": "Montrer d'abord le résultat bluffant, puis révéler comment il a été obtenu (« en réalité, voilà ce qui s'est passé 2 heures plus tôt »).",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 7 — Setup et payoff"
+   }
+  },
+  {
+   "id": "seed-m-034",
+   "topic": "script",
+   "title": "Le méta-twist : la vidéo était le piège",
+   "text": "Twist ultime : révéler que la vidéo elle-même faisait partie de l'expérience (« depuis le début, la moitié de ce que vous voyez est généré par IA »).",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 7 — Setup et payoff"
+   }
+  },
+  {
+   "id": "seed-m-035",
+   "topic": "retention",
+   "title": "Phrases courtes, oralité, autodérision",
+   "text": "Écrire comme on parle : phrases courtes, ton oral, autodérision.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 8 — Rythme"
+   }
+  },
+  {
+   "id": "seed-m-036",
+   "topic": "retention",
+   "title": "Une relance toutes les 15 à 30 secondes",
+   "text": "Placer une blague ou un pattern interrupt toutes les ~15-30 s : apartés, « Squiduu du passé », faux disclaimers (« c'est une vidéo éducative »).",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 8 — Rythme"
+   }
+  },
+  {
+   "id": "seed-m-037",
+   "topic": "script",
+   "title": "Lire à voix haute et couper le superflu",
+   "text": "Lire chaque phrase à voix haute ; couper tout ce qui n'apporte ni enjeu, ni information, ni rire.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 8 et checklist"
+   }
+  },
+  {
+   "id": "seed-m-038",
+   "topic": "script",
+   "title": "Écrire le sound design dans le script",
+   "text": "Noter musique et effets sonores dès l'écriture : le sound design est une partie centrale du style.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 8 — Rythme"
+   }
+  },
+  {
+   "id": "seed-m-039",
+   "topic": "general",
+   "title": "Montrer l'effort",
+   "text": "Se déplacer pour de vrai, construire l'outil soi-même : « les gens voient que vous avez fait des efforts ».",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 8 — Rythme"
+   }
+  },
+  {
+   "id": "seed-m-040",
+   "topic": "retention",
+   "title": "Un montage au service de la lisibilité",
+   "text": "Garder uniquement ce qui rend la vidéo lisible : dérush, zooms et recadrages justifiés, B-roll, sound design. Pas d'effets gratuits.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 8 — Rythme"
+   }
+  },
+  {
+   "id": "seed-m-041",
+   "topic": "script",
+   "title": "Un sponsor intégré au récit, au milieu",
+   "text": "Placer le sponsor au milieu et en faire une nécessité de l'histoire (un VPN parce que « craquer un Wi-Fi sans protection, c'est dangereux ») ou une mécanique de jeu.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 8 — Rythme"
+   }
+  },
+  {
+   "id": "seed-m-042",
+   "topic": "script",
+   "title": "Le payoff final tient la promesse",
+   "text": "La fin livre ce qui a été promis (la révélation, le mot de passe trouvé, le dragon battu) et garde un dernier moment qui fait réagir.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 9 — Payoff et sortie"
+   }
+  },
+  {
+   "id": "seed-m-043",
+   "topic": "retention",
+   "title": "Sortie sèche après le payoff",
+   "text": "Pas de récap ni de « voilà, c'était tout » : « Si vous avez aimé cette vidéo, vous allez adorer celle-ci. Abonnez-vous parce que la vidéo est terminée. » Plus de 15 s après le payoff : couper.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Point 9 et checklist"
+   }
+  },
+  {
+   "id": "seed-m-044",
+   "topic": "script",
+   "title": "Structure d'une vidéo expérience de 12-20 min",
+   "text": "0:00-0:10 hook ; 0:10-1:00 plan, enjeux et 1er obstacle ; ~20 % préparation avec galères ; ~35 % test sur un proche ; ~50 % re-hook ; ~75 % grand test public ; fin : révélation, moment drôle, outro de moins de 15 s.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Structures types"
+   }
+  },
+  {
+   "id": "seed-m-045",
+   "topic": "retention",
+   "title": "Un re-hook à mi-vidéo",
+   "text": "Vers 50 % de la vidéo, relancer avec un élément planté qui se révèle ou une nouvelle « arme ».",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Structures types"
+   }
+  },
+  {
+   "id": "seed-m-046",
+   "topic": "script",
+   "title": "Structure d'une liste ou compilation",
+   "text": "Teaser des meilleurs items, commencer par le plus petit, fils parallèles, le plus gros item à la fin, puis l'outro.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Structures types"
+   }
+  },
+  {
+   "id": "seed-m-047",
+   "topic": "script",
+   "title": "Structure d'un Short de moins de 60 s",
+   "text": "Hook (1 s), objectif (2-3 s), histoire avec progression, récompense satisfaisante, dernier plan qui fait commenter.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Structures types"
+   }
+  },
+  {
+   "id": "seed-m-048",
+   "topic": "script",
+   "title": "Structure d'un story vlog",
+   "text": "Rappel du contexte, calme apparent (« 1 semaine, 2 semaines… tout va bien »), coup de théâtre, « je vous raconte toute l'histoire », rebondissements, happy end.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Structures types"
+   }
+  },
+  {
+   "id": "seed-m-049",
+   "topic": "script",
+   "title": "Écrire le script beat par beat",
+   "text": "Pour chaque beat : timing, voix, visuel/B-roll, son, boucle ouverte ou fermée. Terminer par l'instant où la promesse du titre est tenue et la liste des boucles avec l'endroit où elles se ferment.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Format de sortie"
+   }
+  },
+  {
+   "id": "seed-m-050",
+   "topic": "script",
+   "title": "Le minimum structurel d'un script",
+   "text": "Vérifier au moins 3 paliers d'escalade, 1 setup/payoff et 1 boucle annoncée explicitement.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · Checklist de critique"
+   }
+  },
+  {
+   "id": "seed-m-051",
+   "topic": "general",
+   "title": "Poster 10 vraies vidéos avant de juger",
+   "text": "Publier 10 vraies vidéos, chacune meilleure que la précédente, avant de tirer des conclusions.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · État d'esprit (SQUIDUU 2)"
+   }
+  },
+  {
+   "id": "seed-m-052",
+   "topic": "analytics",
+   "title": "Se remettre en question même quand ça marche",
+   "text": "Analyser les flops mais surtout les succès : « pourquoi 100 000 vues et pas 1 million ? ».",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · État d'esprit (SQUIDUU 2)"
+   }
+  },
+  {
+   "id": "seed-m-053",
+   "topic": "packaging",
+   "title": "Une vidéo qui surperforme, c'est l'idée",
+   "text": "Quand une vidéo surperforme, c'est presque toujours grâce à l'idée : itérer sur le concept avant le montage.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · État d'esprit (SQUIDUU 2)"
+   }
+  },
+  {
+   "id": "seed-m-054",
+   "topic": "analytics",
+   "title": "Après un flop, analyser puis passer à la suite",
+   "text": "Analyser l'échec, ne pas changer dix fois la miniature, et passer vite à la vidéo suivante.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · État d'esprit (SQUIDUU 2)"
+   }
+  },
+  {
+   "id": "seed-m-055",
+   "topic": "general",
+   "title": "Le nombre de bonnes vidéos compte plus que le calendrier",
+   "text": "La régularité de publication compte peu ; ce qui compte, c'est le nombre de bonnes vidéos.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · État d'esprit (SQUIDUU 2)"
+   }
+  },
+  {
+   "id": "seed-m-056",
+   "topic": "general",
+   "title": "Définir une bonne vidéo et demander des retours",
+   "text": "On surestime toujours ses vidéos : définir concrètement ce qu'est une bonne vidéo et demander l'avis d'autres créateurs avant le tournage.",
+   "source": {
+    "kind": "manual",
+    "creator": "Squiduu",
+    "videoTitle": "Méthode de scripting · État d'esprit (SQUIDUU 2)"
+   }
+  },
+  {
+   "id": "seed-m-057",
+   "topic": "retention",
+   "title": "Curiosité et re-hooks réguliers",
+   "text": "Méthode publique de MrBeast retenue dans la méthode : entretenir la curiosité et relancer l'attention par des re-hooks pour tenir la rétention.",
+   "source": {
+    "kind": "manual",
+    "creator": "MrBeast",
+    "videoTitle": "Méthode de scripting · Sources"
+   }
+  },
+  {
+   "id": "seed-m-058",
+   "topic": "script",
+   "title": "Des boucles hook → build → payoff",
+   "text": "Construire le script en boucles : une accroche, une montée, puis une récompense.",
+   "source": {
+    "kind": "manual",
+    "creator": "George Blackman / Ben Kitchen",
+    "videoTitle": "Méthode de scripting · Sources"
+   }
+  },
+  {
+   "id": "seed-m-059",
+   "topic": "script",
+   "title": "Une promesse, puis sa livraison",
+   "text": "Une vidéo est une promesse faite au spectateur, suivie de sa livraison : identifier la promesse et la tenir.",
+   "source": {
+    "kind": "manual",
+    "creator": "Tim Schmoyer",
+    "videoTitle": "Méthode de scripting · Sources"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-01",
+   "topic": "packaging",
+   "title": "L'idée compte plus que tout le reste",
+   "text": "Réallouer du temps vers les idées, les miniatures et le packaging de l'idée dès le départ : pour Paddy Galloway, l'idée est plus importante que tout.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-02",
+   "topic": "packaging",
+   "title": "Pas de titre et de miniature cliquables, pas d'idée",
+   "text": "Si l'on ne peut pas donner à une idée un titre et une miniature cliquables pour son audience, ce n'est plus une idée.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-03",
+   "topic": "packaging",
+   "title": "Exiger des preuves de potentiel",
+   "text": "Se demander s'il existe des preuves que la vidéo pourrait faire 100 000 vues ; avec ses clients, si une idée ne peut pas atteindre 100 K vues, on ne la tourne pas.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-04",
+   "topic": "packaging",
+   "title": "Plaire au noyau et aux nouveaux spectateurs",
+   "text": "Vérifier qu'une idée parle à une large part de l'audience : le noyau aime-t-il ? Attire-t-elle aussi un public nouveau et occasionnel ?",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-05",
+   "topic": "general",
+   "title": "Garder un quota d'expériences",
+   "text": "Réserver une part de la production à l'expérimentation et à l'innovation.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-06",
+   "topic": "hook",
+   "title": "Enregistrer plusieurs versions de l'intro",
+   "text": "En préproduction, écrire trois ou quatre versions de l'intro, les enregistrer et les réécouter pour choisir la meilleure.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-07",
+   "topic": "analytics",
+   "title": "Repérer les zones de danger de rétention",
+   "text": "Chercher dans les courbes de rétention les endroits où la chaîne perd systématiquement des spectateurs.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-08",
+   "topic": "title",
+   "title": "Simple n'est pas synonyme de court",
+   "text": "On confond souvent titre simple et titre court : viser des mots universels, faciles à comprendre.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-09",
+   "topic": "title",
+   "title": "Des titres de 50 caractères ou moins",
+   "text": "La plupart des meilleurs titres de Paddy Galloway font 50 caractères ou moins ; pour trier les variantes, il impose moins de 60 caractères.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-10",
+   "topic": "title",
+   "title": "Générer des variantes de titre avec une IA",
+   "text": "Demander à une IA des variantes d'un titre, puis « plus court » ou « plus d'émotion », et trier ensuite les propositions en équipe.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-11",
+   "topic": "packaging",
+   "title": "Faire voter sa communauté",
+   "text": "Demander l'avis de l'audience sur les titres et miniatures : Twitter, abonnés Instagram, onglet Communauté.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-12",
+   "topic": "thumbnail",
+   "title": "La miniature, c'est la psychologie du clic",
+   "text": "Une miniature, c'est au moins 80, peut-être 90 % de psychologie du clic ; le design ne vient qu'ensuite.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-13",
+   "topic": "thumbnail",
+   "title": "Montrer une situation sur le point de basculer",
+   "text": "Les miniatures qui marchent montrent quelque chose de très intéressant, comme une situation sur le point de se produire.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-14",
+   "topic": "thumbnail",
+   "title": "Le test du coup d'œil",
+   "text": "On doit comprendre la miniature en un seul coup d'œil.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-15",
+   "topic": "thumbnail",
+   "title": "Pas plus de cinq ou six mots",
+   "text": "Éviter de dépasser cinq ou six mots de texte sur une miniature.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-16",
+   "topic": "thumbnail",
+   "title": "De la curiosité même en face caméra",
+   "text": "Pour une vidéo face caméra, créer une question visuelle : par exemple tenir un ordinateur portable avec le texte « waste of money » à côté.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-17",
+   "topic": "thumbnail",
+   "title": "Esquisser rapidement les concepts",
+   "text": "Croquer soi-même, très vite, les idées de miniature avant de les produire.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-18",
+   "topic": "thumbnail",
+   "title": "Trois concepts vraiment différents",
+   "text": "Réduire à trois concepts de miniature, et veiller à ce que chaque option soit suffisamment différente des autres.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-19",
+   "topic": "packaging",
+   "title": "Le packaging, c'est ce qui fait cliquer",
+   "text": "Le packaging consiste à réfléchir à ce qu'on met devant le spectateur pour qu'il clique sur cette vidéo.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-20",
+   "topic": "general",
+   "title": "Organiser la chaîne en trois ou quatre séries",
+   "text": "Découper sa production en « buckets », trois ou quatre séries principales, sans jamais en faire un cadre rigide.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy1-21",
+   "topic": "general",
+   "title": "Mieux vaut sauter une semaine",
+   "text": "Il vaut mieux rater la vidéo de la semaine que publier une mauvaise vidéo.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – The most sought-after YouTube consultant on the planet » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-01",
+   "topic": "general",
+   "title": "Mesurer le potentiel de sa niche",
+   "text": "Chercher sa niche sur YouTube en filtrant les vidéos longues (sans les Shorts) et comparer ce que font les plus grosses chaînes à ses propres vues.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-02",
+   "topic": "general",
+   "title": "Commencer niche, puis élargir",
+   "text": "Démarrer étroit, au plus près de son noyau, puis s'étendre progressivement.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-03",
+   "topic": "packaging",
+   "title": "Ne pas sacrifier son noyau aux tendances",
+   "text": "Suivre une tendance qui n'embarque pas son audience principale fait perdre ce noyau.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-04",
+   "topic": "packaging",
+   "title": "Apporter une nouveauté unique",
+   "text": "Chaque idée doit offrir une forme de nouveauté qui lui est propre.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-05",
+   "topic": "packaging",
+   "title": "Tenter des coups plus ambitieux",
+   "text": "Quand une chaîne est trop étroite, viser des idées plus grandes (« bigger swings »).",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-06",
+   "topic": "packaging",
+   "title": "Trois filtres pour chaque idée",
+   "text": "Est-ce faisable ? Est-ce facile à transmettre en titre + miniature ? Suis-je vraiment enthousiaste à l'idée de faire cette vidéo ?",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-07",
+   "topic": "packaging",
+   "title": "Une page par idée, avec un croquis de miniature",
+   "text": "Développer chaque idée sur une page, avec un croquis grossier de la miniature.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-08",
+   "topic": "packaging",
+   "title": "Trier les idées avec des avis extérieurs",
+   "text": "Recueillir beaucoup d'avis jusqu'à ne garder que 3 ou 4 vidéos à prioriser.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-09",
+   "topic": "general",
+   "title": "Bloquer du temps de brainstorming",
+   "text": "Planifier chaque semaine un créneau dédié à la recherche d'idées.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-10",
+   "topic": "thumbnail",
+   "title": "Trois points focaux au maximum",
+   "text": "Une miniature ne devrait pas avoir plus de trois éléments sur lesquels le regard se pose ; vérifier qu'on traite l'image d'un coup d'œil.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-11",
+   "topic": "thumbnail",
+   "title": "Simplicité et exagération, sans tromper",
+   "text": "Combiner simplicité et exagération sans basculer dans le clickbait : exagérer la chose réelle, pas induire en erreur.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-12",
+   "topic": "thumbnail",
+   "title": "Étudier les miniatures de sa niche",
+   "text": "Analyser les miniatures de sa niche et tenir compte des différences régionales : certains publics cliquent sur des miniatures bien plus chargées en texte qu'en Occident.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-13",
+   "topic": "title",
+   "title": "Un titre 20 % meilleur peut tout changer",
+   "text": "Un titre 20 % meilleur peut doubler, tripler voire quadrupler les vues.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-14",
+   "topic": "general",
+   "title": "Investir dans la préproduction",
+   "text": "Les créateurs de haut niveau passent beaucoup plus de temps à planifier avant de tourner.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-15",
+   "topic": "general",
+   "title": "Limiter le temps de réflexion",
+   "text": "Fixer une limite au temps passé à cogiter : la perfection doit avoir une date limite.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-16",
+   "topic": "general",
+   "title": "Débuter avec 1 à 2 vidéos par semaine",
+   "text": "Au début, viser idéalement 1 ou 2 vidéos par semaine jusqu'à 30, 40, 50 vidéos ; la régularité compte peu pour l'algorithme mais beaucoup pour le mental.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-17",
+   "topic": "analytics",
+   "title": "Comprendre pourquoi une vidéo a percé",
+   "text": "Devant un succès, se demander ce qui l'a rendu unique et pourquoi celle-ci a explosé alors que des vidéos similaires non.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-18",
+   "topic": "analytics",
+   "title": "Regarder le type d'appareil",
+   "text": "Dans le mode avancé de YouTube Studio, examiner la répartition par type d'appareil.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-19",
+   "topic": "analytics",
+   "title": "Le CTR des premières heures prédit le succès",
+   "text": "Le taux de clic de la première heure ou des premières 24 h est souvent un bon indicateur de réussite.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-20",
+   "topic": "analytics",
+   "title": "Le CTR baisse quand les impressions montent",
+   "text": "Plus une vidéo reçoit d'impressions, plus son CTR baisse en général : le lire en tenant compte du volume.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-paddy2-21",
+   "topic": "packaging",
+   "title": "Tester ses hypothèses de packaging",
+   "text": "Préparer plusieurs options de titre et de miniature pour tester ses théories.",
+   "source": {
+    "kind": "document",
+    "creator": "Paddy Galloway",
+    "videoTitle": "Creator Science Podcast — « Paddy Galloway – How he makes any niche go viral » (transcription)",
+    "url": "https://creatorscience.com/podcast/paddy-galloway-2/"
+   }
+  },
+  {
+   "id": "seed-d-ed-01",
+   "topic": "retention",
+   "title": "Intéresser, puis garder l'intérêt",
+   "text": "Sur YouTube, la seule chose à faire est d'intéresser les gens à quelque chose et de les garder intéressés.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-02",
+   "topic": "packaging",
+   "title": "Bombarder son idée d'objections",
+   "text": "Opposer à chaque idée le maximum d'objections possibles ; un angle ennuyeux est un problème à régler avant de produire.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-03",
+   "topic": "packaging",
+   "title": "Packager avant de produire",
+   "text": "Inutile de travailler sur une vidéo tant qu'elle n'a pas de titre et de miniature.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-04",
+   "topic": "general",
+   "title": "Des retours sur tout",
+   "text": "Demander des retours sur son écriture, son montage et ses miniatures.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-05",
+   "topic": "analytics",
+   "title": "Les impressions, premier signal",
+   "text": "Le volume d'impressions en dit long sur sa communauté : ce sont les impressions qui comptent.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-06",
+   "topic": "thumbnail",
+   "title": "Changer la miniature pour relancer une vidéo",
+   "text": "Une nouvelle miniature peut ramener une vidéo à la vie.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-07",
+   "topic": "hook",
+   "title": "L'intro désamorce le clickbait",
+   "text": "Écrire une introduction qui désamorce le clickbait et pose la valeur que le spectateur va obtenir.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-08",
+   "topic": "hook",
+   "title": "Faire comprendre pourquoi c'est important pour eux",
+   "text": "L'introduction doit faire comprendre au spectateur pourquoi ce qui va suivre est important pour lui : lui donner ce qu'il veut, puis ce dont il a besoin.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-09",
+   "topic": "script",
+   "title": "Une histoire pour faire passer un point",
+   "text": "Le plus simple est d'utiliser une histoire, idéalement la sienne, pour illustrer un point.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-10",
+   "topic": "script",
+   "title": "Une métaphore pour les idées complexes",
+   "text": "Pour expliquer une idée complexe, chercher une métaphore.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-11",
+   "topic": "retention",
+   "title": "La phrase suivante est-elle nécessaire ?",
+   "text": "Se demander pour chaque phrase : en ai-je vraiment besoin ?",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-12",
+   "topic": "retention",
+   "title": "Couper au moins 2 minutes au montage",
+   "text": "Ed Lawrence retravaille lourdement ses scripts puis coupe généralement au moins 2 minutes par vidéo au montage.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-13",
+   "topic": "script",
+   "title": "Planifier la fin avant le milieu",
+   "text": "S'assurer que la fin est prévue avant d'écrire le milieu.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-14",
+   "topic": "script",
+   "title": "Boucler la fin sur le début",
+   "text": "Ce qu'il appelle « la boucle » : faire à la fin quelque chose qui s'est produit au début.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-15",
+   "topic": "general",
+   "title": "70 % du temps en planification",
+   "text": "Ed Lawrence consacre environ 70 % de son temps à la planification.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-ed-16",
+   "topic": "retention",
+   "title": "Des vidéos qu'on enchaîne",
+   "text": "Faire des vidéos qu'on a envie d'enchaîner, en finissant par poser le problème que le spectateur a encore.",
+   "source": {
+    "kind": "document",
+    "creator": "Film Booth (Ed Lawrence)",
+    "videoTitle": "Creator Science Podcast — « Ed from Film Booth — The Most Entertaining Educator on YouTube? » (transcription)",
+    "url": "https://creatorscience.com/podcast/ed-lawrence/"
+   }
+  },
+  {
+   "id": "seed-d-george-01",
+   "topic": "packaging",
+   "title": "La première idée n'est pas la meilleure",
+   "text": "La première idée est rarement la bonne : en chercher d'autres.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-02",
+   "topic": "packaging",
+   "title": "Une idée est un angle sur un sujet",
+   "text": "Distinguer le sujet de l'idée : l'idée est l'angle qu'on taille dans le sujet.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-03",
+   "topic": "packaging",
+   "title": "Une idée qu'on ne trouve pas sur Google",
+   "text": "Une bonne idée intéresse le créateur et l'audience, suscite une émotion, ouvre plusieurs écarts de curiosité, et ne se résout pas en une recherche Google rapide.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-04",
+   "topic": "script",
+   "title": "Penser les beats avant de tourner",
+   "text": "Un débutant peut travailler avec des puces, mais il faut réfléchir aux étapes avant de s'asseoir ; inutile de lire mot à mot ce qu'on a écrit.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-05",
+   "topic": "script",
+   "title": "Un avatar d'audience",
+   "text": "Rédiger un avatar d'audience, au moins pour la chaîne entière, pour viser juste dans chaque choix.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-06",
+   "topic": "script",
+   "title": "Écrire avec quatre casquettes",
+   "text": "Artiste (écrire librement vers le grand payoff), architecte (éliminer les idées faibles, ordonner les étapes), écrivain (relier les beats), magicien (la rétention).",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-07",
+   "topic": "script",
+   "title": "Toujours quelque chose qui change",
+   "text": "À tout moment, quelque chose doit progresser, régresser ou changer.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-08",
+   "topic": "script",
+   "title": "Une note d'objectif en tête de script",
+   "text": "Écrire en haut du script l'objectif du spectateur, à quoi ressemblent le succès et l'échec, et les émotions en jeu.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-09",
+   "topic": "retention",
+   "title": "Surligner chaque révélation",
+   "text": "Repérer chaque moment où le spectateur apprend quelque chose ou attend une révélation : les trous montrent où le script manque de payoffs.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-10",
+   "topic": "retention",
+   "title": "Le spectateur sait ce qu'il attend",
+   "text": "L'audience doit savoir à peu près à tout moment ce qu'elle attend ensuite.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-11",
+   "topic": "retention",
+   "title": "Des mini-payoffs vers le grand payoff",
+   "text": "Semer des mini-payoffs tout au long de la vidéo, comme des briques vers la récompense finale.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-12",
+   "topic": "retention",
+   "title": "Ne pas livrer les réponses trop tôt",
+   "text": "Donner les payoffs trop tôt oblige à remplir ensuite ; souvent, il suffit d'inverser l'ordre des parties du script.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-13",
+   "topic": "script",
+   "title": "Rendre le spectateur intelligent",
+   "text": "Donner un indice ou une métaphore avant le point, ou montrer quelque chose avant de l'expliquer, pour que le spectateur se sente malin.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-george-14",
+   "topic": "script",
+   "title": "Un appel à l'action en trois temps",
+   "text": "Fin de vidéo : un lien avec ce qui vient d'être dit, un écart de curiosité, puis l'appel à l'action avec sa promesse.",
+   "source": {
+    "kind": "document",
+    "creator": "George Blackman",
+    "videoTitle": "Creator Science Podcast — « George Blackman – How to script your videos like Ali Abdaal and Ed from Film Booth » (transcription)",
+    "url": "https://creatorscience.com/podcast/george-blackman/"
+   }
+  },
+  {
+   "id": "seed-d-ali-01",
+   "topic": "general",
+   "title": "Utile, hebdomadaire, pendant deux ans",
+   "text": "La règle d'Ali Abdaal : créer du contenu utile, le publier une fois par semaine, et tenir deux ans.",
+   "source": {
+    "kind": "document",
+    "creator": "Ali Abdaal",
+    "videoTitle": "Creator Science Podcast — « Ali Abdaal – Making a living as a part-time YouTuber » (transcription)",
+    "url": "https://creatorscience.com/podcast/ali-abdaal/"
+   }
+  },
+  {
+   "id": "seed-d-ali-02",
+   "topic": "general",
+   "title": "Accepter cent premières vidéos imparfaites",
+   "text": "Il savait qu'il produirait des vidéos médiocres pour les 100 premières, et publiait quand même au moins une vidéo par semaine.",
+   "source": {
+    "kind": "document",
+    "creator": "Ali Abdaal",
+    "videoTitle": "Creator Science Podcast — « Ali Abdaal – Making a living as a part-time YouTuber » (transcription)",
+    "url": "https://creatorscience.com/podcast/ali-abdaal/"
+   }
+  },
+  {
+   "id": "seed-d-ali-03",
+   "topic": "packaging",
+   "title": "Un angle précis plutôt qu'un sujet large",
+   "text": "« 10 façons précises d'utiliser la méthode Zettelkasten » plutôt qu'un sujet trop large que personne ne regarde.",
+   "source": {
+    "kind": "document",
+    "creator": "Ali Abdaal",
+    "videoTitle": "Creator Science Podcast — « Ali Abdaal – Making a living as a part-time YouTuber » (transcription)",
+    "url": "https://creatorscience.com/podcast/ali-abdaal/"
+   }
+  },
+  {
+   "id": "seed-d-ali-04",
+   "topic": "packaging",
+   "title": "Documenter ce qu'on fait déjà",
+   "text": "Trouver ses sujets en documentant ce que l'on fait déjà, au lieu de chercher des idées à partir de rien.",
+   "source": {
+    "kind": "document",
+    "creator": "Ali Abdaal",
+    "videoTitle": "Creator Science Podcast — « Ali Abdaal – Making a living as a part-time YouTuber » (transcription)",
+    "url": "https://creatorscience.com/podcast/ali-abdaal/"
+   }
+  },
+  {
+   "id": "seed-d-ali-05",
+   "topic": "title",
+   "title": "Préférer les titres « comment »",
+   "text": "Ali Abdaal dit se tourner systématiquement vers les titres de type « How to » (« comment… »), d'après son expérience.",
+   "source": {
+    "kind": "document",
+    "creator": "Ali Abdaal",
+    "videoTitle": "Creator Science Podcast — « Ali Abdaal – Making a living as a part-time YouTuber » (transcription)",
+    "url": "https://creatorscience.com/podcast/ali-abdaal/"
+   }
+  },
+  {
+   "id": "seed-d-sean-01",
+   "topic": "script",
+   "title": "Aussi long que nécessaire, aussi court que possible",
+   "text": "Respecter le format et sa durée : une vidéo dure aussi longtemps que nécessaire, mais aussi peu que possible.",
+   "source": {
+    "kind": "document",
+    "creator": "Think Media (Sean Cannell)",
+    "videoTitle": "Creator Science Podcast — « Sean Cannell – How YouTube is changing and what works in 2023 » (transcription)",
+    "url": "https://creatorscience.com/podcast/sean-cannell/"
+   }
+  },
+  {
+   "id": "seed-d-sean-02",
+   "topic": "script",
+   "title": "Une vidéo longue promet et mène de A à B",
+   "text": "Un long tutoriel fonctionne s'il fait une promesse et emmène le spectateur du point A au point B.",
+   "source": {
+    "kind": "document",
+    "creator": "Think Media (Sean Cannell)",
+    "videoTitle": "Creator Science Podcast — « Sean Cannell – How YouTube is changing and what works in 2023 » (transcription)",
+    "url": "https://creatorscience.com/podcast/sean-cannell/"
+   }
+  },
+  {
+   "id": "seed-d-sean-03",
+   "topic": "packaging",
+   "title": "Du contenu que les gens veulent voir",
+   "text": "Créer ce que les gens veulent réellement regarder, pas du contenu centré sur soi.",
+   "source": {
+    "kind": "document",
+    "creator": "Think Media (Sean Cannell)",
+    "videoTitle": "Creator Science Podcast — « Sean Cannell – How YouTube is changing and what works in 2023 » (transcription)",
+    "url": "https://creatorscience.com/podcast/sean-cannell/"
+   }
+  },
+  {
+   "id": "seed-d-sean-04",
+   "topic": "general",
+   "title": "Étudier le terrain avant de se lancer",
+   "text": "Explorer les niches sur YouTube avant de démarrer : le créateur qui comprend le mieux son audience gagne.",
+   "source": {
+    "kind": "document",
+    "creator": "Think Media (Sean Cannell)",
+    "videoTitle": "Creator Science Podcast — « Sean Cannell – How YouTube is changing and what works in 2023 » (transcription)",
+    "url": "https://creatorscience.com/podcast/sean-cannell/"
+   }
+  },
+  {
+   "id": "seed-d-sean-05",
+   "topic": "packaging",
+   "title": "Trouver des idées dans la barre de recherche",
+   "text": "Utiliser l'autocomplétion de YouTube, lire les commentaires de ses vidéos et de celles des autres, poser des questions dans l'onglet Communauté.",
+   "source": {
+    "kind": "document",
+    "creator": "Think Media (Sean Cannell)",
+    "videoTitle": "Creator Science Podcast — « Sean Cannell – How YouTube is changing and what works in 2023 » (transcription)",
+    "url": "https://creatorscience.com/podcast/sean-cannell/"
+   }
+  },
+  {
+   "id": "seed-d-sean-06",
+   "topic": "packaging",
+   "title": "La grande idée : titre, miniature et surtout sujet",
+   "text": "La « grande idée » réunit titre, miniature et, le plus important, le sujet lui-même.",
+   "source": {
+    "kind": "document",
+    "creator": "Think Media (Sean Cannell)",
+    "videoTitle": "Creator Science Podcast — « Sean Cannell – How YouTube is changing and what works in 2023 » (transcription)",
+    "url": "https://creatorscience.com/podcast/sean-cannell/"
+   }
+  },
+  {
+   "id": "seed-d-sean-07",
+   "topic": "title",
+   "title": "Des titres riches en mots-clés et intrigants",
+   "text": "Écrire des titres riches en mots-clés qui donnent envie de cliquer, avec une part de mystère et de curiosité.",
+   "source": {
+    "kind": "document",
+    "creator": "Think Media (Sean Cannell)",
+    "videoTitle": "Creator Science Podcast — « Sean Cannell – How YouTube is changing and what works in 2023 » (transcription)",
+    "url": "https://creatorscience.com/podcast/sean-cannell/"
+   }
+  },
+  {
+   "id": "seed-d-sean-08",
+   "topic": "packaging",
+   "title": "Des sujets d'actualité reliés à sa niche",
+   "text": "Pour sortir de l'anonymat, jouer stratégiquement avec des sujets porteurs (notoriété, découvrabilité) en les reliant à sa niche.",
+   "source": {
+    "kind": "document",
+    "creator": "Think Media (Sean Cannell)",
+    "videoTitle": "Creator Science Podcast — « Sean Cannell – How YouTube is changing and what works in 2023 » (transcription)",
+    "url": "https://creatorscience.com/podcast/sean-cannell/"
+   }
+  },
+  {
+   "id": "seed-d-sean-09",
+   "topic": "analytics",
+   "title": "Les suggestions, premier moteur de vues",
+   "text": "Les vidéos suggérées sont le mécanisme le plus puissant pour obtenir des vues ; jouer à la fois la recherche et les suggestions.",
+   "source": {
+    "kind": "document",
+    "creator": "Think Media (Sean Cannell)",
+    "videoTitle": "Creator Science Podcast — « Sean Cannell – How YouTube is changing and what works in 2023 » (transcription)",
+    "url": "https://creatorscience.com/podcast/sean-cannell/"
+   }
+  },
+  {
+   "id": "seed-d-sean-10",
+   "topic": "analytics",
+   "title": "Juger CTR et rétention à leur résistance",
+   "text": "Regarder combien la vidéo tient ses chiffres quand YouTube l'élargit à des audiences de plus en plus larges.",
+   "source": {
+    "kind": "document",
+    "creator": "Think Media (Sean Cannell)",
+    "videoTitle": "Creator Science Podcast — « Sean Cannell – How YouTube is changing and what works in 2023 » (transcription)",
+    "url": "https://creatorscience.com/podcast/sean-cannell/"
+   }
+  },
+  {
+   "id": "seed-d-cs-01",
+   "topic": "general",
+   "title": "Le format est le chemin de la régularité",
+   "text": "Samir : trouver un format est le chemin vers la régularité.",
+   "source": {
+    "kind": "document",
+    "creator": "Colin and Samir",
+    "videoTitle": "Creator Science Podcast — « Colin & Samir on the future of their channel and the creator economy » (transcription)",
+    "url": "https://creatorscience.com/podcast/colinandsamir/"
+   }
+  },
+  {
+   "id": "seed-d-cs-02",
+   "topic": "general",
+   "title": "Le test des 52 semaines",
+   "text": "Pouvez-vous produire ce format chaque semaine pendant les 52 prochaines semaines ? Il faut pouvoir en faire 52.",
+   "source": {
+    "kind": "document",
+    "creator": "Colin and Samir",
+    "videoTitle": "Creator Science Podcast — « Colin & Samir on the future of their channel and the creator economy » (transcription)",
+    "url": "https://creatorscience.com/podcast/colinandsamir/"
+   }
+  },
+  {
+   "id": "seed-d-cs-03",
+   "topic": "general",
+   "title": "Penser les formats sur le long terme",
+   "text": "Ne pas juger un format sur une fenêtre trop courte, tout en gardant la liberté d'expérimenter.",
+   "source": {
+    "kind": "document",
+    "creator": "Colin and Samir",
+    "videoTitle": "Creator Science Podcast — « Colin & Samir on the future of their channel and the creator economy » (transcription)",
+    "url": "https://creatorscience.com/podcast/colinandsamir/"
+   }
+  },
+  {
+   "id": "seed-d-cs-04",
+   "topic": "hook",
+   "title": "Le hook devient crucial",
+   "text": "Colin : le hook devient extrêmement important maintenant que la miniature pèse peut-être un peu moins.",
+   "source": {
+    "kind": "document",
+    "creator": "Colin and Samir",
+    "videoTitle": "Creator Science Podcast — « Colin & Samir on the future of their channel and the creator economy » (transcription)",
+    "url": "https://creatorscience.com/podcast/colinandsamir/"
+   }
+  }
+ ],
+ "videos": [
+  {
+   "videoId": "L4rXidEr248",
+   "title": "How MrBeast Made YouTube’s Greatest Video (Genius Strategy)",
+   "creator": "Paddy Galloway",
+   "channelTitle": "Paddy Galloway",
+   "channelId": "UClga3ybuyyjpvqsh-cf3DvQ",
+   "durationSec": 566,
+   "topics": [
+    "packaging",
+    "retention"
+   ]
+  },
+  {
+   "videoId": "c5-3gotpgz8",
+   "title": "How Beluga Gained 4 Million Subscribers in 3 Months (Genius Strategy)",
+   "creator": "Paddy Galloway",
+   "channelTitle": "Paddy Galloway",
+   "channelId": "UClga3ybuyyjpvqsh-cf3DvQ",
+   "durationSec": 637,
+   "topics": [
+    "packaging"
+   ]
+  },
+  {
+   "videoId": "UxoCyoV3LBY",
+   "title": "How Ryan Trahan Got 1000% More Views (Genius Strategy)",
+   "creator": "Paddy Galloway",
+   "channelTitle": "Paddy Galloway",
+   "channelId": "UClga3ybuyyjpvqsh-cf3DvQ",
+   "durationSec": 652,
+   "topics": [
+    "packaging",
+    "script"
+   ]
+  },
+  {
+   "videoId": "PVsLIPTdm6U",
+   "title": "How Dream Averages 27 Million Views Per Video (Genius)",
+   "creator": "Paddy Galloway",
+   "channelTitle": "Paddy Galloway",
+   "channelId": "UClga3ybuyyjpvqsh-cf3DvQ",
+   "durationSec": 675,
+   "topics": [
+    "packaging"
+   ]
+  },
+  {
+   "videoId": "S2xHZPH5Sng",
+   "title": "Clickbait is Unreasonably Effective",
+   "creator": "Veritasium",
+   "channelTitle": "Veritasium",
+   "channelId": "UCHnyfMqiRRG1u-2MsSQLbXA",
+   "topics": [
+    "title",
+    "thumbnail",
+    "packaging"
+   ]
+  },
+  {
+   "videoId": "YcDfY3R3RS0",
+   "title": "6 Years Of YouTube Knowledge In 11 Minutes",
+   "creator": "Film Booth",
+   "channelTitle": "Film Booth",
+   "channelId": "UCSQ6ebJE6MTrEAN_P-L-fuA",
+   "durationSec": 685,
+   "topics": [
+    "general",
+    "retention"
+   ]
+  },
+  {
+   "videoId": "2rzzRxixzq4",
+   "title": "How to Easily Script YouTube Videos to Get More Views",
+   "creator": "Think Media",
+   "channelTitle": "Think Media",
+   "topics": [
+    "script",
+    "hook"
+   ]
+  },
+  {
+   "videoId": "AX3dEGjBg6w",
+   "title": "Meet MrBeast's Secret YouTube Consultant (Paddy Galloway Interview)",
+   "creator": "Paddy Galloway",
+   "channelTitle": "Jon Youshaei",
+   "channelId": "UCj8DGOv5P7Ngsh-telMG-pw",
+   "durationSec": 1196,
+   "topics": [
+    "packaging"
+   ]
+  },
+  {
+   "videoId": "j7GtybYc6gk",
+   "title": "Paddy Galloway Dives Deep on Video A/B & Ask Studio",
+   "creator": "Paddy Galloway",
+   "channelTitle": "Creator Insider",
+   "durationSec": 1434,
+   "topics": [
+    "analytics",
+    "thumbnail",
+    "title"
+   ]
+  },
+  {
+   "videoId": "Q0zRBsYQnA0",
+   "title": "Paddy Galloway Reveals The #1 YouTube Editing Error To Avoid",
+   "creator": "Paddy Galloway",
+   "channelTitle": "The Editing Podcast",
+   "channelId": "UCJJV8pckL_OiW-IpzwPqAfw",
+   "durationSec": 1743,
+   "topics": [
+    "retention"
+   ]
+  },
+  {
+   "videoId": "HEiAiPGatwc",
+   "title": "Meet the Man Who Solved YouTube (Paddy Galloway Interview)",
+   "creator": "Paddy Galloway",
+   "channelTitle": "Jay Clouse",
+   "channelId": "UCUoSr3dQcE_MWlRY1WZmCZA",
+   "durationSec": 3966,
+   "topics": [
+    "packaging"
+   ]
+  },
+  {
+   "videoId": "dAR3d6xnG0o",
+   "title": "The NEW Rules Of YouTube (From a 50 Billion View Strategist)",
+   "creator": "Paddy Galloway",
+   "channelTitle": "Sweat Equity",
+   "channelId": "UC3c6jXLSMhDH6XlcoKXGryA",
+   "durationSec": 4101,
+   "topics": [
+    "general"
+   ]
+  },
+  {
+   "videoId": "L9CO1FcRHCM",
+   "title": "The New Rules of YouTube (2025)",
+   "creator": "Colin and Samir",
+   "channelTitle": "Colin and Samir",
+   "channelId": "UCamLstJyCa-t5gfZegxsFMw",
+   "durationSec": 5800,
+   "topics": [
+    "general",
+    "packaging"
+   ]
+  },
+  {
+   "videoId": "Z2uoA3bhJT0",
+   "title": "2-Hour Youtube Masterclass From The World's Highest-Paid Strategist",
+   "creator": "Paddy Galloway",
+   "channelTitle": "Open Residency",
+   "channelId": "UC3P7JC2BIQHpUvdhxFHmnsg",
+   "durationSec": 9908,
+   "topics": [
+    "packaging",
+    "thumbnail",
+    "title"
+   ]
+  }
+ ]
+}

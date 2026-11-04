@@ -139,7 +139,7 @@ export async function ensureReachJob(channelId: string): Promise<{ jobId: string
   const types: string[] = [];
   let token: string | undefined;
   for (let i = 0; i < 5; i++) {
-    const r = await reporting<{ reportTypes?: { id: string; deprecateTime?: string }[]; nextPageToken?: string }>(channelId, `${REPORTING}/reportTypes${token ? `?pageToken=${encodeURIComponent(token)}` : ''}`);
+    const r: { reportTypes?: { id: string; deprecateTime?: string }[]; nextPageToken?: string } = await reporting(channelId, `${REPORTING}/reportTypes${token ? `?pageToken=${encodeURIComponent(token)}` : ''}`);
     for (const t of r.reportTypes ?? []) if (/^channel_reach_basic_a\d+$/.test(t.id) && !t.deprecateTime) types.push(t.id);
     token = r.nextPageToken; if (!token) break;
   }
@@ -148,7 +148,7 @@ export async function ensureReachJob(channelId: string): Promise<{ jobId: string
   const jobs: { id: string; reportTypeId: string; createTime?: string }[] = [];
   token = undefined;
   for (let i = 0; i < 5; i++) {
-    const r = await reporting<{ jobs?: { id: string; reportTypeId: string; createTime?: string }[]; nextPageToken?: string }>(channelId, `${REPORTING}/jobs${token ? `?pageToken=${encodeURIComponent(token)}` : ''}`);
+    const r: { jobs?: { id: string; reportTypeId: string; createTime?: string }[]; nextPageToken?: string } = await reporting(channelId, `${REPORTING}/jobs${token ? `?pageToken=${encodeURIComponent(token)}` : ''}`);
     jobs.push(...(r.jobs ?? []));
     token = r.nextPageToken; if (!token) break;
   }
@@ -174,7 +174,7 @@ export async function fetchReach(channelId: string, videoIds: string[], fromDate
   let token: string | undefined;
   const after = new Date(ptMidnight(addDays(fromDate, -1))).toISOString();
   for (let i = 0; i < 10; i++) {
-    const r = await reporting<{ reports?: ReportInfo[]; nextPageToken?: string }>(channelId, `${REPORTING}/jobs/${encodeURIComponent(job.jobId)}/reports?startTimeAtOrAfter=${encodeURIComponent(after)}${token ? `&pageToken=${encodeURIComponent(token)}` : ''}`);
+    const r: { reports?: ReportInfo[]; nextPageToken?: string } = await reporting(channelId, `${REPORTING}/jobs/${encodeURIComponent(job.jobId)}/reports?startTimeAtOrAfter=${encodeURIComponent(after)}${token ? `&pageToken=${encodeURIComponent(token)}` : ''}`);
     reports.push(...(r.reports ?? []));
     token = r.nextPageToken; if (!token) break;
   }

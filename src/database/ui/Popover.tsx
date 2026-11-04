@@ -116,6 +116,10 @@ export function Popover({ open, onClose, anchor, children, placement = 'bottom-s
           exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.12 } }}
           transition={{ type: 'spring', bounce: 0, duration: 0.28 }}
           onPointerDown={e => e.stopPropagation()}
+          onClick={e => e.stopPropagation()}
+          onDoubleClick={e => e.stopPropagation()}
+          onContextMenu={e => e.stopPropagation()}
+          onKeyDown={e => e.stopPropagation()}
         >
           {children}
         </motion.div>

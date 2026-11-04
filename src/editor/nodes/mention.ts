@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Mentions « @ » : pages (lien cliquable), dates (@aujourd'hui, @demain…), rappels (@rappel → notification).
 import Mention from '@tiptap/extension-mention';
 import { mergeAttributes, type Editor } from '@tiptap/core';
@@ -189,11 +190,11 @@ export const PrismeMention = Mention.extend({
         }
       }
     },
-    render: suggestionRenderer<never, never>({
+    render: suggestionRenderer<any, any>({
       pluginKey: MentionPluginKey,
       autoExitOnEmptySpace: true,
       emptyText: 'Aucune page ni date',
-      toList: (items) => (items as unknown as MentionItem[]).map((it, i) => {
+      toList: (items: unknown[]) => (items as MentionItem[]).map((it, i) => {
         switch (it.type) {
           case 'page': return { key: 'p' + it.id, title: it.title, icon: icon(it.icon), group: 'Pages' };
           case 'new-page': return { key: 'new' + i, title: `Nouvelle page « ${it.title} »`, icon: icon('➕'), group: 'Pages' };

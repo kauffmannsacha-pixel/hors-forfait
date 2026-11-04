@@ -178,19 +178,20 @@ class KnowledgeEngine {
     let vecs: Float32Array[] | null = null;
     if (settings.semantic && isModelReady() && clean.length) { try { vecs = await embedTexts(clean.map(embedText)); } catch { vecs = null; } }
     const index = opts.dedupe === false ? null : new DedupeIndex(this.list().map(p => ({ id: p.id, title: p.title, text: p.text, vec: this.vectors.get(p.id) })));
-    const added: KnPrinciple[] = []; const duplicates: { index: number; existingId: string }[] = [];
+    const added: KnPrinciple[] = []; const addedVecs: (Float32Array | undefined)[] = [];
+    const duplicates: { index: number; existingId: string }[] = [];
     const now = Date.now();
     clean.forEach((it, i) => {
       const vec = vecs?.[i];
       const dup = index?.find({ title: it.title, text: it.text, vec });
       if (dup) { duplicates.push({ index: i, existingId: dup }); return; }
       const p: KnPrinciple = { ...it, id: uid(), hash: principleHash(it.title, it.text), createdAt: now + i };
-      added.push(p);
+      added.push(p); addedVecs.push(vec);
       index?.add(p.id, { title: p.title, text: p.text, vec });
     });
     if (added.length) {
       await store.putPrinciples(added);
-      const withVec = vecs ? added.map(p => ({ id: p.id, vec: vecs![clean.findIndex(c => c.title === p.title && c.text === p.text)] })).filter(x => x.vec) : [];
+      const withVec = added.map((p, j) => ({ id: p.id, vec: addedVecs[j] })).filter((x): x is { id: string; vec: Float32Array } => !!x.vec);
       if (withVec.length) await store.putEmbeddings(settings.model, withVec);
       for (const p of added) { this.byId.set(p.id, p); this.bm25?.add(p.id, this.bmFields(p)); }
       for (const w of withVec) this.vectors.set(w.id, w.vec);
@@ -216,7 +217,11 @@ class KnowledgeEngine {
     next.hash = principleHash(next.title, next.text);
     await store.putPrinciples([next]);
     this.byId.set(id, next); this.bm25?.add(id, this.bmFields(next));
-    if (patch.title != null || patch.text != null) { this.vectors.delete(id); await store.deletePrinciples([]).catch(() => undefined); void this.ensureIndex({ download: false }).catch(() => undefined); }
+    if (patch.title != null || patch.text != null) {
+      this.vectors.delete(id); this.qCache.clear();
+      await store.deleteEmbeddings([id]);
+      void this.ensureIndex({ download: false }).catch(() => undefined);
+    }
     this.bump();
   }
 
@@ -224,6 +229,7 @@ class KnowledgeEngine {
     const store = await this.st();
     if (!ids.length) return;
     const seedIds = ids.filter(id => this.byId.get(id)?.origin === 'seed');
+    const touched = new Set(ids.map(id => this.byId.get(id)?.sourceId).filter((x): x is string => !!x));
     await store.deletePrinciples(ids);
     for (const id of ids) { this.byId.delete(id); this.vectors.delete(id); this.bm25?.remove(id); }
     if (seedIds.length) {
@@ -231,11 +237,13 @@ class KnowledgeEngine {
       await repo.kvSet(KV.seedDeleted, [...new Set([...prev, ...seedIds])]);
     }
     // Compteurs des sources concernées
-    const touched = new Set<string>();
-    for (const s of this.srcs.values()) touched.add(s.id);
+    this.sorted = null;
+    const counts = new Map<string, number>();
+    for (const p of this.byId.values()) if (p.sourceId) counts.set(p.sourceId, (counts.get(p.sourceId) ?? 0) + 1);
     for (const sid of touched) {
-      const s = this.srcs.get(sid)!; const n = this.list().filter(p => p.sourceId === sid).length;
-      if (n !== s.principles && s.status === 'ok') { s.principles = n; await store.putSource(s); }
+      const src = this.srcs.get(sid); if (!src) continue;
+      const next = { ...src, principles: counts.get(sid) ?? 0 };
+      this.srcs.set(sid, next); await store.putSource(next);
     }
     this.bump();
   }

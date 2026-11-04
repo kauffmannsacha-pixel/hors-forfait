@@ -14,6 +14,7 @@ export interface KnStore {
   deleteSource(id: string): Promise<void>;
   allEmbeddings(model: string): Promise<Map<string, Float32Array>>;
   putEmbeddings(model: string, items: { id: string; vec: Float32Array }[]): Promise<void>;
+  deleteEmbeddings(ids: string[]): Promise<void>;
   clearEmbeddings(): Promise<void>;
   getTranscript(videoId: string): Promise<Transcript | undefined>;
   putTranscript(t: Transcript): Promise<void>;
@@ -39,6 +40,7 @@ export class MemoryKnStore implements KnStore {
   async deleteSource(id: string) { this.s.delete(id); }
   async allEmbeddings(model: string) { const m = new Map<string, Float32Array>(); for (const [id, v] of this.e) if (v.model === model) m.set(id, v.vec); return m; }
   async putEmbeddings(model: string, items: { id: string; vec: Float32Array }[]) { for (const i of items) this.e.set(i.id, { model, vec: i.vec }); }
+  async deleteEmbeddings(ids: string[]) { for (const id of ids) this.e.delete(id); }
   async clearEmbeddings() { this.e.clear(); }
   async getTranscript(videoId: string) { return this.t.get(videoId); }
   async putTranscript(t: Transcript) { this.t.set(t.videoId, t); }

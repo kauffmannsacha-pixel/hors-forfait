@@ -73,6 +73,7 @@ export function Menu({ anchor, items, onClose, placement = 'bottom-start', minWi
               if (it.submenu) hoverTimer.current = window.setTimeout(() => openSub(i), 120);
               else if (sub) hoverTimer.current = window.setTimeout(() => setSub(null), 150);
             }}
+            onMouseDown={e => e.preventDefault()}
             onClick={() => void run(i)}>
             <span className="menu-icon">{it.checked ? <IconCheck /> : it.icon}</span>
             <span className="menu-label">{it.label}{it.hint && <span className="menu-hint">{it.hint}</span>}</span>

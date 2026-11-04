@@ -119,7 +119,7 @@ export interface RawAxis { id?: unknown; note?: unknown; explication?: unknown; 
 export interface NormalizedAxis<P> { id: AxisId; score: number | null; explanation: string; moment: { t: number; label: string } | null; advice: string; principles: P[] }
 export interface NormalizedReport<P> { summary: string; axes: NormalizedAxis<P>[]; priorities: string[]; overall: number | null }
 
-const strip = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+const strip = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 const ALIASES: Record<string, AxisId> = { hook: 'hook', accroche: 'hook', intrigue: 'intrigue', rythme: 'rythme', rhythm: 'rythme', pacing: 'rythme', payoff: 'payoff', miniature: 'miniature', thumbnail: 'miniature', titre: 'titre', title: 'titre' };
 
 export function normalizeReport<P>(raw: unknown, principles: P[], durationSec: number): NormalizedReport<P> {

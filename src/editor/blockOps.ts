@@ -78,6 +78,10 @@ export function moveBlock(editor: Editor, dir: -1 | 1, pos?: number) {
   }).focus().run();
 }
 
+const TURN_CMD: Record<TurnInto, string> = { paragraph: 'setParagraph', h1: 'setHeading', h2: 'setHeading', h3: 'setHeading', bullet: 'toggleBulletList', ordered: 'toggleOrderedList', task: 'toggleTaskList', toggle: 'setDetails', quote: 'toggleBlockquote', callout: 'setCallout', code: 'setCodeBlock' };
+/** Types disponibles dans cet éditeur (le mode compact n'a ni callout ni toggle). */
+export const availableTurnInto = (editor: Editor) => TURN_INTO.filter(t => TURN_CMD[t.id] in editor.commands);
+
 /** Transforme le bloc situé à `pos` (ou le bloc courant) dans un autre type. */
 export function turnInto(editor: Editor, kind: TurnInto, pos?: number) {
   const { state } = editor;
