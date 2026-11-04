@@ -60,3 +60,8 @@ export async function recordPublished(v: PublishedVideo) {
   useHistory.setState({ items });
   await repo.kvSet(K.history, items);
 }
+
+// ── Navigation interne (onglet, carte à publier, créneau choisi) ──
+export type PublishTab = 'preparer' | 'file' | 'ab' | 'heure';
+export const usePublishNav = create<{ tab: PublishTab; pendingIdeaId?: string; pendingSchedule?: number }>(() => ({ tab: 'preparer' }));
+export const goPublishTab = (tab: PublishTab) => usePublishNav.setState({ tab });

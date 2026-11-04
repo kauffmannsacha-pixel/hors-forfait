@@ -45,7 +45,7 @@ export function IdeaTestView({ test, onUseVariant }: { test: IdeaTest; onUseVari
   );
 }
 
-export function BriefCard({ meta, onChange, onTest, testing }: { meta: ScriptMeta; onChange: (p: Partial<ScriptMeta>) => void; onTest: () => void; testing: boolean }) {
+export function BriefCard({ meta, onChange, onTest, testing }: { meta: ScriptMeta; onChange: (p: Partial<ScriptMeta>) => void; onTest: (idea: string) => void; testing: boolean }) {
   const [idea, setIdea] = useDraft(meta.idea, v => onChange({ idea: v }));
   const [title, setTitle] = useDraft(meta.plannedTitle, v => onChange({ plannedTitle: v }));
   const [thumb, setThumb] = useDraft(meta.plannedThumbnail, v => onChange({ plannedThumbnail: v }));
@@ -62,7 +62,7 @@ export function BriefCard({ meta, onChange, onTest, testing }: { meta: ScriptMet
             <TextArea rows={2} value={idea} onChange={e => setIdea(e.target.value)} placeholder="« Je dessine un inconnu au hasard et je dois le retrouver dans la vraie vie »" />
           </Field>
           <div className="row">
-            <Button size="sm" variant={meta.ideaTest && !stale ? 'secondary' : 'primary'} loading={testing} disabled={!idea.trim()} onClick={onTest}>{meta.ideaTest ? 'Re-tester l\'idée' : 'Tester l\'idée avec Claude'}</Button>
+            <Button size="sm" variant={meta.ideaTest && !stale ? 'secondary' : 'primary'} loading={testing} disabled={!idea.trim()} onClick={() => onTest(idea)}>{meta.ideaTest ? 'Re-tester l\'idée' : 'Tester l\'idée avec Claude'}</Button>
             {stale && <span className="muted sc-small">L'idée a changé depuis le dernier test.</span>}
           </div>
           {meta.ideaTest && <IdeaTestView test={meta.ideaTest} onUseVariant={v => { setIdea(v); onChange({ idea: v }); }} />}
